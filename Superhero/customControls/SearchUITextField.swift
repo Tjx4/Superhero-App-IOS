@@ -8,7 +8,6 @@ import UIKit
         backgroundColor = hexStringToUIColor(hex: "#E9E9E9")
         updateCornerRadius()
         setBorder()
-        setLeftPaddingPoints()
     }
     
 
@@ -40,9 +39,5 @@ import UIKit
      override func editingRect(forBounds bounds: CGRect) -> CGRect {
          return self.textRect(forBounds: bounds)
      }
-    
-    func setLeftPaddingPoints(){
-       //self.layer.sublayerTransform = CATransform3DMakeTranslation(50, 0, 0);
-    }
     
 }
