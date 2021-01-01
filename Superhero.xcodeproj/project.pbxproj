@@ -15,6 +15,8 @@
 		7C27C9EC259F567F0086CA25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C27C9EA259F567F0086CA25 /* LaunchScreen.storyboard */; };
 		7C27C9F7259F567F0086CA25 /* SuperheroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27C9F6259F567F0086CA25 /* SuperheroTests.swift */; };
 		7C27CA02259F567F0086CA25 /* SuperheroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27CA01259F567F0086CA25 /* SuperheroUITests.swift */; };
+		7C5793A1259F94EC0082CAD0 /* SearchUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */; };
+		7C5793AD259F95800082CAD0 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5793AC259F95800082CAD0 /* ColorHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7C27C9FD259F567F0086CA25 /* SuperheroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C27CA01259F567F0086CA25 /* SuperheroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroUITests.swift; sourceTree = "<group>"; };
 		7C27CA03259F567F0086CA25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUITextField.swift; sourceTree = "<group>"; };
+		7C5793AC259F95800082CAD0 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		7C27C9DE259F567C0086CA25 /* Superhero */ = {
 			isa = PBXGroup;
 			children = (
+				7C5793AB259F95700082CAD0 /* helpers */,
+				7C57939F259F94A10082CAD0 /* customControls */,
 				7C27C9DF259F567C0086CA25 /* AppDelegate.swift */,
 				7C27C9E1259F567C0086CA25 /* SceneDelegate.swift */,
 				7C27C9E3259F567C0086CA25 /* ViewController.swift */,
@@ -126,6 +132,22 @@
 				7C27CA03259F567F0086CA25 /* Info.plist */,
 			);
 			path = SuperheroUITests;
+			sourceTree = "<group>";
+		};
+		7C57939F259F94A10082CAD0 /* customControls */ = {
+			isa = PBXGroup;
+			children = (
+				7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */,
+			);
+			path = customControls;
+			sourceTree = "<group>";
+		};
+		7C5793AB259F95700082CAD0 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7C5793AC259F95800082CAD0 /* ColorHelper.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C27C9E4259F567C0086CA25 /* ViewController.swift in Sources */,
+				7C5793AD259F95800082CAD0 /* ColorHelper.swift in Sources */,
 				7C27C9E0259F567C0086CA25 /* AppDelegate.swift in Sources */,
 				7C27C9E2259F567C0086CA25 /* SceneDelegate.swift in Sources */,
+				7C5793A1259F94EC0082CAD0 /* SearchUITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FC94YSW5S;
 				INFOPLIST_FILE = Superhero/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FC94YSW5S;
 				INFOPLIST_FILE = Superhero/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Superhero-->
+        <!--Superheroes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,14 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for heroes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsr-PL-uUD">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for heroes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsr-PL-uUD" customClass="SearchUITextField" customModule="Superhero" customModuleProvider="target">
                                 <rect key="frame" x="20" y="108" width="374" height="45"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Ott-RK-zmp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VFO-IG-yyk">
                                 <rect key="frame" x="20" y="109" width="49" height="43"/>
@@ -53,13 +55,36 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ojd-o3-eqf" secondAttribute="bottom" id="r3o-Y9-sRm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Superhero" id="XZ5-Zw-CFs">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="logo_black" id="xPm-ua-aMT"/>
+                    <navigationItem key="navigationItem" title="Superheroes" id="XZ5-Zw-CFs">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="logo_black" id="xPm-ua-aMT">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="vQd-jH-cRn" kind="show" id="yBR-Ae-Yc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vc6-El-6hi">
+            <objects>
+                <viewController id="vQd-jH-cRn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qh9-Um-OdO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1yD-dy-sLq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WSx-l6-4mo">
+                        <barButtonItem key="backBarButtonItem" title="back" id="hJe-xz-h7y"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RMK-Yf-s7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2658" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eGd-me-CFq">
@@ -78,14 +103,16 @@
             <point key="canvasLocation" x="923" y="94"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="dsr-PL-uUD">
+            <size key="intrinsicContentSize" width="142.5" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="logo_black" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
