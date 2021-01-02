@@ -1,9 +1,11 @@
 
 import UIKit
+import Moya
 
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var superheroTableView: UITableView!
+    @IBOutlet weak var txtSearch: SearchUITextField!
     
     var superheroes: [Superhero]?
     var selectedIndex: Int!
@@ -16,10 +18,27 @@ class SearchViewController: UIViewController {
         superheroTableView.delegate = self as! UITableViewDelegate
         superheroTableView.dataSource = self as! UITableViewDataSource
         
+        txtSearch.delegate = self
+    }
+
+    @IBAction func onEditChanged(_ sender: Any) {
+        if (sender as! SearchUITextField).text?.count ?? 0 < 4 {
+           return
+       }
         
+      
         
+        //Moya
+    }
+    
+    
+    @IBAction func onTextChangedEnd(_ sender: SearchUITextField) {
+        /*
+         if sender.text?.count ?? 0 < 1 {
+            return
+        }
         
-        
+        */
         
         var superhero = Superhero()
         var image = Image()
@@ -35,12 +54,11 @@ class SearchViewController: UIViewController {
         
         superheroes = [superhero, superhero2]
     }
-
     
-    @IBAction func onLogoTouchUpside(_ sender: Any) {
-       // segueToScreen(segueIdentifier: "viewHeroSegue")
+    @IBAction func onViewFavouritesClicked(_ sender: Any) {
+        segueToScreen(segueIdentifier: "viewFavouritesSegue")
     }
-
+    
     func viewSuperhero(superhero: Superhero){
     }
     
@@ -48,7 +66,7 @@ class SearchViewController: UIViewController {
           if segue.identifier == "viewHeroSegue" {
               let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
             
-            viewSuperheroViewController.superhero = superheroes?[selectedIndex]
+              viewSuperheroViewController.superhero = superheroes?[selectedIndex]
           }
       }
 }

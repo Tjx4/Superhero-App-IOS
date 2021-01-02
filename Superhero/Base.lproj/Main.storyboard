@@ -26,6 +26,12 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onEditChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="eRJ-FW-tQz"/>
+                                    <action selector="onTextChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="t3x-8C-Red"/>
+                                    <action selector="onTextChangedEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="aqZ-jA-7kg"/>
+                                    <action selector="onTextEditEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="07x-j6-vQG"/>
+                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VFO-IG-yyk">
                                 <rect key="frame" x="10" y="109" width="49" height="43"/>
@@ -56,21 +62,57 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Superheroes" id="XZ5-Zw-CFs">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="logo_black" id="xPm-ua-aMT">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="logo_black" id="xPm-ua-aMT">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="onLogoTouchUpside:" destination="BYZ-38-t0r" id="9d9-Y3-qJU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="fav_dark" id="8c2-JH-HKa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onViewFavouritesClicked:" destination="BYZ-38-t0r" id="r5N-0y-zw6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="superheroTableView" destination="ojd-o3-eqf" id="JoE-6C-U0k"/>
+                        <outlet property="txtSearch" destination="dsr-PL-uUD" id="PpT-Ml-LDT"/>
                         <segue destination="vQd-jH-cRn" kind="show" identifier="viewHeroSegue" id="yBR-Ae-Yc5"/>
+                        <segue destination="bFp-mB-Zur" kind="presentation" identifier="viewFavouritesSegue" id="raC-gY-5kw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="94"/>
+        </scene>
+        <!--Favourites Table View Controller-->
+        <scene sceneID="cAn-2O-GMb">
+            <objects>
+                <tableViewController id="bFp-mB-Zur" customClass="FavouritesTableViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MdQ-BQ-JD6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XNz-79-OCs">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XNz-79-OCs" id="nuq-ge-KMQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bFp-mB-Zur" id="8lq-eb-tfi"/>
+                            <outlet property="delegate" destination="bFp-mB-Zur" id="dIR-uE-0qJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szZ-Tx-cVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="829"/>
         </scene>
         <!--View Superhero View Controller-->
         <scene sceneID="Vc6-El-6hi">
@@ -80,7 +122,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-B3-eHO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-B3-eHO">
                                 <rect key="frame" x="0.0" y="88" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="azf-eS-yYf"/>
@@ -89,6 +131,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1yD-dy-sLq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="trailing" secondItem="1yD-dy-sLq" secondAttribute="trailing" id="0Xw-tf-nLo"/>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="leading" secondItem="1yD-dy-sLq" secondAttribute="leading" id="5ge-6G-5im"/>
@@ -97,6 +140,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="WSx-l6-4mo">
                         <barButtonItem key="backBarButtonItem" title="back" id="hJe-xz-h7y"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="fav_dark" id="scD-Ng-eaU">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imgvHeroImage" destination="pYs-B3-eHO" id="FDI-2O-eFT"/>
@@ -130,6 +176,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="fav_dark" width="24" height="24"/>
         <image name="logo_black" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="placeholder" width="400" height="266.5"/>
