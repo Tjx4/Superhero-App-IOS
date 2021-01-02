@@ -24,6 +24,9 @@
 		7C5793E025A03FE10082CAD0 /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5793DF25A03FE10082CAD0 /* Superhero.swift */; };
 		7C5793E525A041220082CAD0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5793E425A041220082CAD0 /* Image.swift */; };
 		7C57941325A054930082CAD0 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57941225A054930082CAD0 /* UIImageViewExtensions.swift */; };
+		7C57942325A05C050082CAD0 /* SuperheroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57942125A05C050082CAD0 /* SuperheroTableViewCell.swift */; };
+		7C57942425A05C050082CAD0 /* SuperheroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C57942225A05C050082CAD0 /* SuperheroTableViewCell.xib */; };
+		7C57942925A05C3F0082CAD0 /* RoundedUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		7C5793DF25A03FE10082CAD0 /* Superhero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Superhero.swift; sourceTree = "<group>"; };
 		7C5793E425A041220082CAD0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		7C57941225A054930082CAD0 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		7C57942125A05C050082CAD0 /* SuperheroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTableViewCell.swift; sourceTree = "<group>"; };
+		7C57942225A05C050082CAD0 /* SuperheroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroTableViewCell.xib; sourceTree = "<group>"; };
+		7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIImageView.swift; sourceTree = "<group>"; };
 		E52349CB2BFF025488D71362 /* Pods-Superhero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Superhero.release.xcconfig"; path = "Target Support Files/Pods-Superhero/Pods-Superhero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +136,7 @@
 		7C27C9DE259F567C0086CA25 /* Superhero */ = {
 			isa = PBXGroup;
 			children = (
+				7C57942025A05B770082CAD0 /* customCells */,
 				7C5793DE25A03FD00082CAD0 /* models */,
 				7C5793D825A03F520082CAD0 /* extensions */,
 				7C5793CF25A03E580082CAD0 /* features */,
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */,
+				7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */,
 			);
 			path = customControls;
 			sourceTree = "<group>";
@@ -213,6 +221,15 @@
 				7C5793E425A041220082CAD0 /* Image.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		7C57942025A05B770082CAD0 /* customCells */ = {
+			isa = PBXGroup;
+			children = (
+				7C57942125A05C050082CAD0 /* SuperheroTableViewCell.swift */,
+				7C57942225A05C050082CAD0 /* SuperheroTableViewCell.xib */,
+			);
+			path = customCells;
 			sourceTree = "<group>";
 		};
 		F7EFDF68C1B8A10FBF8FB248 /* Pods */ = {
@@ -332,6 +349,7 @@
 				7C27C9EC259F567F0086CA25 /* LaunchScreen.storyboard in Resources */,
 				7C27C9E9259F567F0086CA25 /* Assets.xcassets in Resources */,
 				7C27C9E7259F567C0086CA25 /* Main.storyboard in Resources */,
+				7C57942425A05C050082CAD0 /* SuperheroTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +419,7 @@
 				7C5793DA25A03F700082CAD0 /* UIViewControllerExtensions.swift in Sources */,
 				7C5793B9259FA3A20082CAD0 /* GradientUIView.swift in Sources */,
 				7C27C9E4259F567C0086CA25 /* SearchViewController.swift in Sources */,
+				7C57942325A05C050082CAD0 /* SuperheroTableViewCell.swift in Sources */,
 				7C5793AD259F95800082CAD0 /* ColorHelper.swift in Sources */,
 				7C5793D125A03E7B0082CAD0 /* ViewSuperheroViewController.swift in Sources */,
 				7C27C9E0259F567C0086CA25 /* AppDelegate.swift in Sources */,
@@ -409,6 +428,7 @@
 				7C5793E025A03FE10082CAD0 /* Superhero.swift in Sources */,
 				7C57941325A054930082CAD0 /* UIImageViewExtensions.swift in Sources */,
 				7C5793E525A041220082CAD0 /* Image.swift in Sources */,
+				7C57942925A05C3F0082CAD0 /* RoundedUIImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
