@@ -7,6 +7,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var superheroTableView: UITableView!
     @IBOutlet weak var txtSearch: SearchUITextField!
     
+    let superheroProvider = MoyaProvider<SuperheroService>()
     var superheroes: [Superhero]?
     var selectedIndex: Int!
     
@@ -17,29 +18,41 @@ class SearchViewController: UIViewController {
         superheroTableView.register(SuperheroTableViewCell.nib(), forCellReuseIdentifier: SuperheroTableViewCell.identifier)
         superheroTableView.delegate = self as! UITableViewDelegate
         superheroTableView.dataSource = self as! UITableViewDataSource
-        
-        txtSearch.delegate = self
     }
 
-    @IBAction func onEditChanged(_ sender: Any) {
-        if (sender as! SearchUITextField).text?.count ?? 0 < 4 {
+    @IBAction func onEditChanged(_ sender: SearchUITextField) {
+        let keywords = sender.text ?? ""
+        
+        if keywords != "man"{
            return
-       }
+        }
         
-      
         
-        //Moya
+        searchForSuperHeroes(keywords: keywords)
     }
     
     
-    @IBAction func onTextChangedEnd(_ sender: SearchUITextField) {
-        /*
-         if sender.text?.count ?? 0 < 1 {
-            return
+    func searchForSuperHeroes(keywords: String)  {
+        superheroProvider.request(.search(keyword: keywords)) { (result) in
+            
+            switch result {
+                case .success(let response) :
+                    let searchResult = try! JSONDecoder().decode(SearchResponse.self, from: response.data)
+                    self.superheroes = searchResult.results
+                    self.superheroTableView.reloadData()
+              
+                case .failure(let error) :
+                    print("Error: \(error)")
+             }
         }
-        
-        */
-        
+    }
+    
+    
+/*
+     
+     let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
+     print("json = \(json)")
+     
         var superhero = Superhero()
         var image = Image()
         image.url = "http://appicsoftware.co.za/api/Platinum_access_backend/1/profpic.jpeg"
@@ -53,8 +66,8 @@ class SearchViewController: UIViewController {
         superhero2.name = "My lady"
         
         superheroes = [superhero, superhero2]
-    }
     
+*/
     @IBAction func onViewFavouritesClicked(_ sender: Any) {
         segueToScreen(segueIdentifier: "viewFavouritesSegue")
     }

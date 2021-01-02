@@ -1,5 +1,5 @@
 struct Superhero: Codable {
-    var id: Int = 0
+    var id: String? = nil
     var name: String? = nil
 
              
