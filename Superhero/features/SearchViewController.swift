@@ -6,6 +6,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var superheroTableView: UITableView!
     @IBOutlet weak var txtSearch: SearchUITextField!
+    @IBOutlet weak var activityLoader: UIActivityIndicatorView!
     
     let superheroProvider = MoyaProvider<SuperheroService>()
     var superheroes: [Superhero]?
@@ -13,35 +14,43 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        activityLoader.isHidden = true
         
         superheroTableView.register(SuperheroTableViewCell.nib(), forCellReuseIdentifier: SuperheroTableViewCell.identifier)
         superheroTableView.delegate = self as! UITableViewDelegate
         superheroTableView.dataSource = self as! UITableViewDataSource
     }
-
+    
+    
     @IBAction func onEditChanged(_ sender: SearchUITextField) {
         let keywords = sender.text ?? ""
         
-        if keywords != "man"{
-           return
+        if keywords == "man" || keywords == "captain"{
+        }
+        else{
+            return
         }
         
+        activityLoader.isHidden = false
+        activityLoader.translatesAutoresizingMaskIntoConstraints = false
+        activityLoader.startAnimating()
         
         searchForSuperHeroes(keywords: keywords)
     }
-    
     
     func searchForSuperHeroes(keywords: String)  {
         superheroProvider.request(.search(keyword: keywords)) { (result) in
             
             switch result {
                 case .success(let response) :
+                    self.activityLoader.isHidden = true
+                    
                     let searchResult = try! JSONDecoder().decode(SearchResponse.self, from: response.data)
                     self.superheroes = searchResult.results
                     self.superheroTableView.reloadData()
               
                 case .failure(let error) :
+                    self.activityLoader.isHidden = true
                     print("Error: \(error)")
              }
         }
