@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for heroes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsr-PL-uUD" customClass="SearchUITextField" customModule="Superhero" customModuleProvider="target">
-                                <rect key="frame" x="20" y="108" width="374" height="45"/>
+                                <rect key="frame" x="10" y="108" width="394" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Ott-RK-zmp"/>
                                 </constraints>
@@ -28,13 +28,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VFO-IG-yyk">
-                                <rect key="frame" x="20" y="109" width="49" height="43"/>
+                                <rect key="frame" x="10" y="109" width="49" height="43"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="lOK-gD-Pze"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-o3-eqf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-o3-eqf">
                                 <rect key="frame" x="0.0" y="173" width="414" height="689"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemGray2Color"/>
@@ -45,8 +45,8 @@
                         <constraints>
                             <constraint firstItem="VFO-IG-yyk" firstAttribute="top" secondItem="dsr-PL-uUD" secondAttribute="top" id="2PM-bL-qq8"/>
                             <constraint firstItem="VFO-IG-yyk" firstAttribute="leading" secondItem="dsr-PL-uUD" secondAttribute="leading" id="4tz-RK-bGk"/>
-                            <constraint firstItem="dsr-PL-uUD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BbZ-Hs-piN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsr-PL-uUD" secondAttribute="trailing" constant="20" id="Hii-qI-pbO"/>
+                            <constraint firstItem="dsr-PL-uUD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BbZ-Hs-piN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsr-PL-uUD" secondAttribute="trailing" constant="10" id="Hii-qI-pbO"/>
                             <constraint firstAttribute="trailing" secondItem="ojd-o3-eqf" secondAttribute="trailing" id="LpV-es-dBC"/>
                             <constraint firstItem="ojd-o3-eqf" firstAttribute="top" secondItem="dsr-PL-uUD" secondAttribute="bottom" constant="20" id="VCr-KN-PcV"/>
                             <constraint firstItem="VFO-IG-yyk" firstAttribute="bottom" secondItem="dsr-PL-uUD" secondAttribute="bottom" id="e7m-DK-4A6"/>
