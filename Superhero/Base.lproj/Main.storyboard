@@ -126,9 +126,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-B3-eHO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="280"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="azf-eS-yYf"/>
+                                    <constraint firstAttribute="height" constant="280" id="azf-eS-yYf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
