@@ -24,6 +24,26 @@ class SuperheroTableViewCell: UITableViewCell {
         lblSuperheroName.text = superhero?.name
         
         imgSuperhero.sd_setImage(with: URL(string: superhero?.image?.url ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        
+        
+        
+        //imgSetFav.isHidden = superhero.isFave
+        //imgFav.isHidden = false
+        
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imgSetFav.isUserInteractionEnabled = true
+        imgSetFav.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        tappedImage.isHidden = true
+        imgFav.isHidden = false
+        
+        // Your action
     }
     
 }

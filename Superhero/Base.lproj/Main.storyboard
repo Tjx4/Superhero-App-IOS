@@ -40,7 +40,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-o3-eqf">
                                 <rect key="frame" x="0.0" y="173" width="414" height="689"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9AM-HA-eWN">
                                 <rect key="frame" x="197" y="183" width="20" height="20"/>
@@ -133,7 +133,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1yD-dy-sLq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="trailing" secondItem="1yD-dy-sLq" secondAttribute="trailing" id="0Xw-tf-nLo"/>
