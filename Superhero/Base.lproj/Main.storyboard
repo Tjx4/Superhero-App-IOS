@@ -64,6 +64,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="superheroTableView" destination="ojd-o3-eqf" id="JoE-6C-U0k"/>
                         <segue destination="vQd-jH-cRn" kind="show" identifier="viewHeroSegue" id="yBR-Ae-Yc5"/>
                     </connections>
                 </viewController>

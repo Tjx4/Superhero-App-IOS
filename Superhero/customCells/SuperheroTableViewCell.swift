@@ -1,23 +1,29 @@
-//
-//  SuperheroTableViewCell.swift
-//  Superhero
-//
-//  Created by Tshepo Mahlaula on 2021/01/02.
-//
-
 import UIKit
 
 class SuperheroTableViewCell: UITableViewCell {
-
+    static let identifier = "SuperheroTableViewCell"
+    @IBOutlet weak var imgSuperhero: RoundedUIImageView!
+    @IBOutlet weak var lblSuperheroName: UILabel!
+    @IBOutlet weak var imgFav: UIImageView!
+    @IBOutlet weak var imgSetFav: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "SuperheroTableViewCell", bundle: nil)
+    }
+    
+    public func config(superhero: Superhero?){
+        
+        lblSuperheroName.text = superhero?.name
+        
+        imgSuperhero.sd_setImage(with: URL(string: superhero?.image?.url ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
     }
     
 }
