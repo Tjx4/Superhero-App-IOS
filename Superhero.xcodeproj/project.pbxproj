@@ -138,7 +138,6 @@
 				7C57939F259F94A10082CAD0 /* customControls */,
 				7C27C9DF259F567C0086CA25 /* AppDelegate.swift */,
 				7C27C9E1259F567C0086CA25 /* SceneDelegate.swift */,
-				7C27C9E3259F567C0086CA25 /* SearchViewController.swift */,
 				7C27C9E5259F567C0086CA25 /* Main.storyboard */,
 				7C27C9E8259F567F0086CA25 /* Assets.xcassets */,
 				7C27C9EA259F567F0086CA25 /* LaunchScreen.storyboard */,
@@ -192,6 +191,7 @@
 		7C5793CF25A03E580082CAD0 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				7C27C9E3259F567C0086CA25 /* SearchViewController.swift */,
 				7C5793D025A03E7B0082CAD0 /* ViewSuperheroViewController.swift */,
 			);
 			path = features;
