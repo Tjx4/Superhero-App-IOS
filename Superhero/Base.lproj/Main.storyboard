@@ -70,7 +70,7 @@
                                 <action selector="onLogoTouchUpside:" destination="BYZ-38-t0r" id="9d9-Y3-qJU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="fav_dark" id="8c2-JH-HKa">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="favourites_list" width="5" id="8c2-JH-HKa">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onViewFavouritesClicked:" destination="BYZ-38-t0r" id="r5N-0y-zw6"/>
@@ -573,7 +573,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMq-Kf-yoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3548" y="94"/>
+            <point key="canvasLocation" x="3528" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eGd-me-CFq">
@@ -602,6 +602,7 @@
     </designables>
     <resources>
         <image name="fav_dark" width="24" height="24"/>
+        <image name="favourites_list" width="36" height="36"/>
         <image name="logo_black" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="placeholder" width="400" height="266.5"/>
