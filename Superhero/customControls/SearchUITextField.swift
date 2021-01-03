@@ -30,9 +30,9 @@ import UIKit
     override func textRect(forBounds bounds: CGRect) -> CGRect {
          return CGRect(
              x: bounds.origin.x + 46,
-             y: bounds.origin.y + 15,
+             y: bounds.origin.y + 0,
              width: bounds.size.width - 15 * 2,
-             height: bounds.size.height - 15 * 2
+             height: bounds.size.height
          )
      }
     
