@@ -5,9 +5,7 @@ import UIKit
     override func layoutSubviews() {
         super.layoutSubviews()
  
-        let padding: CGFloat = 10.0
-        let uIEdgeInsets = UIEdgeInsets(top: padding, left: 0.0, bottom: 0.0, right: padding)
-      
+        let padding: CGFloat = 13.0
         self.image = self.image?.imageWithInsets(insets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
     }
 }
