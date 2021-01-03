@@ -539,11 +539,41 @@
                         <outlet property="txtPublisher" destination="aZD-6X-t3Z" id="nDa-vj-1Km"/>
                         <outlet property="txtRealName" destination="OaJ-TG-S58" id="1Ik-Cs-Cm6"/>
                         <outlet property="txtSuperhero" destination="rX4-86-tu5" id="o9C-qz-MYJ"/>
+                        <segue destination="nVq-UU-Qe2" kind="show" identifier="rateHeroSegue" id="Ey9-4S-6gN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMK-Yf-s7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2657.971014492754" y="93.75"/>
+        </scene>
+        <!--Rating View Controller-->
+        <scene sceneID="4H7-YI-FEX">
+            <objects>
+                <viewController id="nVq-UU-Qe2" customClass="RatingViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jki-v4-j3o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-JS-7Ih" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
+                                <rect key="frame" x="147" y="124" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0BK-k1-z7x"/>
+                                    <constraint firstAttribute="width" constant="120" id="l3n-ym-rPu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YVD-dg-h5P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nO0-JS-7Ih" firstAttribute="top" secondItem="YVD-dg-h5P" secondAttribute="top" constant="36" id="8pq-hh-eKG"/>
+                            <constraint firstItem="nO0-JS-7Ih" firstAttribute="centerX" secondItem="jki-v4-j3o" secondAttribute="centerX" id="wRM-YC-ODj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m0g-56-KJA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMq-Kf-yoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3548" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eGd-me-CFq">
@@ -565,6 +595,9 @@
     <designables>
         <designable name="dsr-PL-uUD">
             <size key="intrinsicContentSize" width="142.5" height="34"/>
+        </designable>
+        <designable name="nO0-JS-7Ih">
+            <size key="intrinsicContentSize" width="400" height="266.5"/>
         </designable>
     </designables>
     <resources>
