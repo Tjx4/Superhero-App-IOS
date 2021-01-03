@@ -131,14 +131,44 @@
                                     <constraint firstAttribute="height" constant="280" id="azf-eS-yYf"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="22n-RX-lUe">
+                                <rect key="frame" x="20" y="388" width="374" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="wkK-vz-RbA"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXo-P3-9yr">
+                                <rect key="frame" x="40" y="398" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mgb-8S-fbH">
+                                <rect key="frame" x="20" y="568" width="374" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="34s-3T-vX8"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1yD-dy-sLq"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="trailing" secondItem="1yD-dy-sLq" secondAttribute="trailing" id="0Xw-tf-nLo"/>
+                            <constraint firstItem="1yD-dy-sLq" firstAttribute="trailing" secondItem="22n-RX-lUe" secondAttribute="trailing" constant="20" id="1O4-Xq-ENh"/>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="leading" secondItem="1yD-dy-sLq" secondAttribute="leading" id="5ge-6G-5im"/>
+                            <constraint firstItem="22n-RX-lUe" firstAttribute="top" secondItem="pYs-B3-eHO" secondAttribute="bottom" constant="20" id="B3j-XE-h0h"/>
+                            <constraint firstItem="22n-RX-lUe" firstAttribute="top" secondItem="vXo-P3-9yr" secondAttribute="bottom" constant="-31" id="BCU-dh-dhf"/>
+                            <constraint firstItem="Mgb-8S-fbH" firstAttribute="trailing" secondItem="vXo-P3-9yr" secondAttribute="trailing" id="KTr-s1-Ncq"/>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="top" secondItem="1yD-dy-sLq" secondAttribute="top" id="USy-tz-CKW"/>
+                            <constraint firstItem="vXo-P3-9yr" firstAttribute="leading" secondItem="Mgb-8S-fbH" secondAttribute="leading" constant="20" id="ZwA-W5-3gQ"/>
+                            <constraint firstItem="Mgb-8S-fbH" firstAttribute="top" secondItem="22n-RX-lUe" secondAttribute="bottom" constant="20" id="b7s-Pc-3Rz"/>
+                            <constraint firstItem="22n-RX-lUe" firstAttribute="leading" secondItem="1yD-dy-sLq" secondAttribute="leading" constant="20" id="f5Q-Fi-gh8"/>
+                            <constraint firstItem="Mgb-8S-fbH" firstAttribute="leading" secondItem="1yD-dy-sLq" secondAttribute="leading" constant="20" id="jCN-8u-JgR"/>
+                            <constraint firstItem="1yD-dy-sLq" firstAttribute="trailing" secondItem="Mgb-8S-fbH" secondAttribute="trailing" constant="20" id="uum-20-vEV"/>
+                            <constraint firstItem="Mgb-8S-fbH" firstAttribute="firstBaseline" secondItem="22n-RX-lUe" secondAttribute="baseline" constant="20" id="xGs-r3-0pU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WSx-l6-4mo">
