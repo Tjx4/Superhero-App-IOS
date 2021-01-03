@@ -1,0 +1,3 @@
+struct Connections: Codable {
+    
+}

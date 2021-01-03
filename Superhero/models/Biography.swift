@@ -1,0 +1,3 @@
+struct Biography: Codable {
+    
+}

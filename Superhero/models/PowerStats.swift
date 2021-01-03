@@ -1,0 +1,3 @@
+struct PowerStats: Codable {
+    
+}

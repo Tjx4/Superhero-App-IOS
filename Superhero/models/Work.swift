@@ -1,0 +1,3 @@
+struct Work: Codable {
+    
+}
