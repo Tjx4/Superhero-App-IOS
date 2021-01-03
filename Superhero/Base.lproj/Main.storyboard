@@ -525,6 +525,15 @@
                         <outlet property="alAppearance" destination="PU4-7X-WxZ" id="Ys0-3V-D3C"/>
                         <outlet property="cvAppearance" destination="0wi-eW-5wn" id="0SO-j9-bv3"/>
                         <outlet property="imgvHeroImage" destination="pYs-B3-eHO" id="FDI-2O-eFT"/>
+                        <outlet property="lblAlterEgo" destination="0j6-uD-HYy" id="lEu-q4-n9w"/>
+                        <outlet property="lblApperance" destination="a87-Rq-2GD" id="k0j-50-dGo"/>
+                        <outlet property="lblFullname" destination="wDi-Uw-Wpv" id="gH4-1z-olo"/>
+                        <outlet property="lblHeight" destination="qs7-IS-KdZ" id="MvV-j9-ChD"/>
+                        <outlet property="lblInteligence" destination="XO3-l9-axh" id="y5g-aa-gpP"/>
+                        <outlet property="lblPlaceOfBirth" destination="4ug-ER-pXF" id="pqA-LS-bBt"/>
+                        <outlet property="lblSpeed" destination="SQ3-MX-XLu" id="7Pm-hc-34Q"/>
+                        <outlet property="lblStrength" destination="KDJ-SK-UAI" id="BVt-JF-klM"/>
+                        <outlet property="lblWeight" destination="slE-qk-Uu5" id="wk1-eM-3Yv"/>
                         <outlet property="loadingContainer" destination="QTK-PJ-kqN" id="pEf-vf-WAT"/>
                         <outlet property="navBar" destination="WSx-l6-4mo" id="rUc-Hl-oU9"/>
                         <outlet property="txtPublisher" destination="aZD-6X-t3Z" id="nDa-vj-1Km"/>
