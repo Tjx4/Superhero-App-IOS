@@ -345,12 +345,15 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="HpS-CW-FLS"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="MORE INFO"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onMoreInfoClicked:" destination="vQd-jH-cRn" eventType="touchUpInside" id="Ylt-Zf-qfR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -391,6 +394,9 @@
                     <connections>
                         <outlet property="imgvHeroImage" destination="pYs-B3-eHO" id="FDI-2O-eFT"/>
                         <outlet property="navBar" destination="WSx-l6-4mo" id="rUc-Hl-oU9"/>
+                        <outlet property="txtPublisher" destination="aZD-6X-t3Z" id="nDa-vj-1Km"/>
+                        <outlet property="txtRealName" destination="OaJ-TG-S58" id="1Ik-Cs-Cm6"/>
+                        <outlet property="txtSuperhero" destination="rX4-86-tu5" id="o9C-qz-MYJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMK-Yf-s7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
