@@ -469,6 +469,11 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="C7f-pP-70L"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iXe-UU-1c6"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="alP-9L-DOJ"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1yD-dy-sLq"/>
