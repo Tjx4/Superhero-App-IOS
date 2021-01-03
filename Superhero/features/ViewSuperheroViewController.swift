@@ -6,7 +6,7 @@ class ViewSuperheroViewController: UIViewController {
     @IBOutlet weak var txtSuperhero: UILabel!
     @IBOutlet weak var txtRealName: UILabel!
     @IBOutlet weak var txtPublisher: UILabel!
-    
+    @IBOutlet weak var cvAppearance: CardView!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var imgvHeroImage: UIImageView!
     var superhero: Superhero?
@@ -19,6 +19,8 @@ class ViewSuperheroViewController: UIViewController {
         
     }
     
-    @IBAction func onMoreInfoClicked(_ sender: Any) {
+    @IBAction func onMoreInfoClicked(_ sender: UIButton) {
+        sender.isHidden = true
+        cvAppearance.isHidden = false
     }
 }
