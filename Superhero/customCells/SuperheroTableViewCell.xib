@@ -62,7 +62,6 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGray6Color"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="dY4-W5-ass" secondAttribute="trailing" id="GUg-wJ-crT"/>
                     <constraint firstAttribute="bottom" secondItem="dY4-W5-ass" secondAttribute="bottom" id="aza-Nq-XB0"/>
@@ -78,6 +77,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
                 <outlet property="imgFav" destination="zob-q6-Dgb" id="clj-rS-0aS"/>
                 <outlet property="imgSetFav" destination="jBm-W7-21d" id="yJs-98-MbS"/>

@@ -34,7 +34,7 @@ class SuperheroTableViewCell: UITableViewCell {
         imgSetFav.isUserInteractionEnabled = true
         imgSetFav.addGestureRecognizer(tapGestureRecognizer)
     }
-    
+   
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -42,7 +42,7 @@ class SuperheroTableViewCell: UITableViewCell {
         tappedImage.isHidden = true
         imgFav.isHidden = false
         
-        // Your action
+        // Add hero to fav
     }
     
 }

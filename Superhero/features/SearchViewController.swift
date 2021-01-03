@@ -98,6 +98,7 @@ extension SearchViewController: UITableViewDelegate {
         selectedIndex = indexPath.item
         segueToScreen(segueIdentifier: "viewHeroSegue")
     }
+    
 }
 
 extension SearchViewController: UITableViewDataSource {
@@ -111,12 +112,19 @@ extension SearchViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let superheroTableViewCell = tableView.dequeueReusableCell(withIdentifier: SuperheroTableViewCell.identifier, for: indexPath) as! SuperheroTableViewCell
+       
+        let superheroTableViewCell = tableView.dequeueReusableCell(withIdentifier: SuperheroTableViewCell.identifier, for: indexPath) as! SuperheroTableViewCell
         
         let superhero: Superhero? = superheroes?[indexPath.row]
         superheroTableViewCell.config(superhero: superhero)
-            
+        
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")
+        superheroTableViewCell.selectedBackgroundView = bgColorView
+        
         return superheroTableViewCell
     }
+    
 
 }
