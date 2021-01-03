@@ -19,8 +19,14 @@ class SearchViewController: UIViewController {
         superheroTableView.register(SuperheroTableViewCell.nib(), forCellReuseIdentifier: SuperheroTableViewCell.identifier)
         superheroTableView.delegate = self as! UITableViewDelegate
         superheroTableView.dataSource = self as! UITableViewDataSource
+    
+        self.txtSearch.delegate = self
     }
     
+    func textFieldShouldReturn(userText: UITextField!) -> Bool {
+        userText.resignFirstResponder()
+        return true;
+    }
     
     @IBAction func onEditChanged(_ sender: SearchUITextField) {
         let keywords = sender.text ?? ""
@@ -81,6 +87,9 @@ class SearchViewController: UIViewController {
         segueToScreen(segueIdentifier: "viewFavouritesSegue")
     }
     
+    @IBAction func onLogoClicked(_ sender: Any) {
+    }
+    
     func viewSuperhero(superhero: Superhero){
     }
     
@@ -97,6 +106,7 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.item
         segueToScreen(segueIdentifier: "viewHeroSegue")
+        self.txtSearch?.resignFirstResponder()
     }
     
 }

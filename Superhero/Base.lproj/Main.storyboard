@@ -64,10 +64,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Superheroes" id="XZ5-Zw-CFs">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="logo_black" id="xPm-ua-aMT">
-                            <color key="tintColor" systemColor="labelColor"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="logo_black" id="xPm-ua-aMT">
+                            <color key="tintColor" red="0.31295609098518318" green="0.43173364256863095" blue="0.5584520725388602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="onLogoTouchUpside:" destination="BYZ-38-t0r" id="9d9-Y3-qJU"/>
+                                <action selector="onLogoClicked:" destination="BYZ-38-t0r" id="WEU-gl-7jG"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="favourites_list" width="5" id="8c2-JH-HKa">
