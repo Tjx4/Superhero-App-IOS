@@ -3,6 +3,8 @@ import SDWebImage
 
 class ViewSuperheroViewController: UIViewController {
     
+    @IBOutlet weak var loadingContainer: UIView!
+    @IBOutlet weak var alAppearance: UIActivityIndicatorView!
     @IBOutlet weak var txtSuperhero: UILabel!
     @IBOutlet weak var txtRealName: UILabel!
     @IBOutlet weak var txtPublisher: UILabel!
@@ -22,5 +24,11 @@ class ViewSuperheroViewController: UIViewController {
     @IBAction func onMoreInfoClicked(_ sender: UIButton) {
         sender.isHidden = true
         cvAppearance.isHidden = false
+        
+        alAppearance.translatesAutoresizingMaskIntoConstraints = false
+        alAppearance.startAnimating()
+        
+        
+        //loadingContainer
     }
 }
