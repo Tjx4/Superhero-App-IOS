@@ -38,6 +38,7 @@
 		7C57947025A1A7640082CAD0 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57946F25A1A7640082CAD0 /* Connections.swift */; };
 		7C57947525A1AA070082CAD0 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57947425A1AA070082CAD0 /* UIImageExtension.swift */; };
 		7C57947A25A1AB220082CAD0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57947925A1AB220082CAD0 /* CardView.swift */; };
+		7C57947F25A1CE2F0082CAD0 /* MoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57947E25A1CE2F0082CAD0 /* MoreButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		7C57946F25A1A7640082CAD0 /* Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
 		7C57947425A1AA070082CAD0 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		7C57947925A1AB220082CAD0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		7C57947E25A1CE2F0082CAD0 /* MoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreButton.swift; sourceTree = "<group>"; };
 		E52349CB2BFF025488D71362 /* Pods-Superhero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Superhero.release.xcconfig"; path = "Target Support Files/Pods-Superhero/Pods-Superhero.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +204,7 @@
 				7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */,
 				7C57944A25A0CE360082CAD0 /* PaddedImageView.swift */,
 				7C57947925A1AB220082CAD0 /* CardView.swift */,
+				7C57947E25A1CE2F0082CAD0 /* MoreButton.swift */,
 			);
 			path = customControls;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				7C57941325A054930082CAD0 /* UIImageViewExtensions.swift in Sources */,
 				7C57946625A1A6F90082CAD0 /* Appearance.swift in Sources */,
 				7C5793E525A041220082CAD0 /* Image.swift in Sources */,
+				7C57947F25A1CE2F0082CAD0 /* MoreButton.swift in Sources */,
 				7C57942925A05C3F0082CAD0 /* RoundedUIImageView.swift in Sources */,
 				7C57942E25A084070082CAD0 /* FavouritesTableViewController.swift in Sources */,
 				7C57947A25A1AB220082CAD0 /* CardView.swift in Sources */,
