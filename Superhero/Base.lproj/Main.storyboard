@@ -131,7 +131,7 @@
                                     <constraint firstAttribute="height" constant="280" id="azf-eS-yYf"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cG-Xv-iVc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cG-Xv-iVc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alP-9L-DOJ" userLabel="ContentView">
@@ -452,6 +452,7 @@
                                             <constraint firstItem="0wi-eW-5wn" firstAttribute="top" secondItem="1Pn-he-QXq" secondAttribute="bottom" constant="10" id="QaX-5k-Bql"/>
                                             <constraint firstItem="O0X-ak-21C" firstAttribute="top" secondItem="VtS-42-ar6" secondAttribute="bottom" constant="10" id="U6v-02-VtG"/>
                                             <constraint firstAttribute="trailing" secondItem="VtS-42-ar6" secondAttribute="trailing" id="WGb-Wm-3sb"/>
+                                            <constraint firstAttribute="bottom" secondItem="0wi-eW-5wn" secondAttribute="bottom" constant="255" id="a6A-AW-mqD"/>
                                             <constraint firstAttribute="height" constant="1000" id="eQJ-re-T5o"/>
                                             <constraint firstItem="ExC-2g-3VC" firstAttribute="top" secondItem="1Pn-he-QXq" secondAttribute="bottom" constant="20" id="rFr-Pc-am4"/>
                                             <constraint firstItem="1Pn-he-QXq" firstAttribute="top" secondItem="O0X-ak-21C" secondAttribute="bottom" constant="10" id="uJn-TO-tiw"/>
@@ -463,9 +464,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="alP-9L-DOJ" firstAttribute="top" secondItem="iXe-UU-1c6" secondAttribute="top" id="NJf-jm-Iif"/>
-                                    <constraint firstItem="alP-9L-DOJ" firstAttribute="centerX" secondItem="3cG-Xv-iVc" secondAttribute="centerX" id="Sut-AP-iTV"/>
-                                    <constraint firstAttribute="trailing" secondItem="alP-9L-DOJ" secondAttribute="trailing" id="llG-op-kd0"/>
-                                    <constraint firstItem="alP-9L-DOJ" firstAttribute="leading" secondItem="3cG-Xv-iVc" secondAttribute="leading" id="mUP-tw-64Z"/>
+                                    <constraint firstItem="iXe-UU-1c6" firstAttribute="trailing" secondItem="alP-9L-DOJ" secondAttribute="trailing" id="llG-op-kd0"/>
+                                    <constraint firstItem="alP-9L-DOJ" firstAttribute="leading" secondItem="iXe-UU-1c6" secondAttribute="leading" id="mUP-tw-64Z"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="C7f-pP-70L"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iXe-UU-1c6"/>
@@ -477,8 +477,8 @@
                         <constraints>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="trailing" secondItem="qh9-Um-OdO" secondAttribute="trailing" id="0Xw-tf-nLo"/>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="leading" secondItem="qh9-Um-OdO" secondAttribute="leading" id="5ge-6G-5im"/>
-                            <constraint firstItem="3cG-Xv-iVc" firstAttribute="leading" secondItem="1yD-dy-sLq" secondAttribute="leading" id="N2C-xx-mlx"/>
-                            <constraint firstItem="3cG-Xv-iVc" firstAttribute="trailing" secondItem="1yD-dy-sLq" secondAttribute="trailing" id="S2A-vE-ov5"/>
+                            <constraint firstItem="3cG-Xv-iVc" firstAttribute="leading" secondItem="qh9-Um-OdO" secondAttribute="leading" id="N2C-xx-mlx"/>
+                            <constraint firstItem="3cG-Xv-iVc" firstAttribute="trailing" secondItem="qh9-Um-OdO" secondAttribute="trailing" id="S2A-vE-ov5"/>
                             <constraint firstItem="pYs-B3-eHO" firstAttribute="top" secondItem="1yD-dy-sLq" secondAttribute="top" id="USy-tz-CKW"/>
                             <constraint firstItem="1yD-dy-sLq" firstAttribute="bottom" secondItem="3cG-Xv-iVc" secondAttribute="bottom" id="mem-Kb-nNc"/>
                             <constraint firstItem="3cG-Xv-iVc" firstAttribute="top" secondItem="1yD-dy-sLq" secondAttribute="top" id="r6K-zG-qEh"/>
