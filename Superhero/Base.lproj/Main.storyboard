@@ -138,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-lj-Jwb" userLabel="cardsContainer">
-                                                <rect key="frame" x="0.0" y="280" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="280" width="414" height="600"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtS-42-ar6" userLabel="Title Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
@@ -263,11 +263,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-he-QXq" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="190" width="394" height="120"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-he-QXq" userLabel="Biography Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="215" width="394" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u9-cU-tzN">
-                                                                <rect key="frame" x="10" y="10" width="77.5" height="20.5"/>
+                                                                <rect key="frame" x="10" y="10" width="374" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -291,7 +291,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOH-zL-pGP">
-                                                                <rect key="frame" x="10" y="40.5" width="77.5" height="1"/>
+                                                                <rect key="frame" x="10" y="40.5" width="374" height="1"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="rVc-xF-iCg"/>
@@ -345,11 +345,27 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-eW-5wn" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="190" width="394" height="120"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExC-2g-3VC">
+                                                        <rect key="frame" x="10" y="355" width="394" height="45"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="HpS-CW-FLS"/>
+                                                        </constraints>
+                                                        <state key="normal" title="MORE INFO"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onMoreInfoClicked:" destination="vQd-jH-cRn" eventType="touchUpInside" id="Ylt-Zf-qfR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-eW-5wn" userLabel="Appearance Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="345" width="394" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-il-jzi">
-                                                                <rect key="frame" x="10" y="10" width="92" height="20.5"/>
+                                                                <rect key="frame" x="10" y="10" width="374" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -373,7 +389,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbD-qb-OAg">
-                                                                <rect key="frame" x="10" y="40.5" width="92" height="1"/>
+                                                                <rect key="frame" x="10" y="40.5" width="374" height="1"/>
                                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="oul-mE-Vyp"/>
@@ -427,40 +443,26 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExC-2g-3VC">
-                                                        <rect key="frame" x="10" y="227" width="394" height="45"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="HpS-CW-FLS"/>
-                                                        </constraints>
-                                                        <state key="normal" title="MORE INFO"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="3"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="onMoreInfoClicked:" destination="vQd-jH-cRn" eventType="touchUpInside" id="Ylt-Zf-qfR"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="1Pn-he-QXq" secondAttribute="trailing" constant="10" id="1b2-2V-e7c"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ExC-2g-3VC" secondAttribute="trailing" constant="10" id="26H-OJ-hPJ"/>
                                                     <constraint firstItem="O0X-ak-21C" firstAttribute="top" secondItem="VtS-42-ar6" secondAttribute="bottom" constant="10" id="3hL-8j-fUi"/>
+                                                    <constraint firstItem="0wi-eW-5wn" firstAttribute="leading" secondItem="VMT-lj-Jwb" secondAttribute="leading" constant="10" id="6nr-ct-jnO"/>
+                                                    <constraint firstItem="1Pn-he-QXq" firstAttribute="top" secondItem="O0X-ak-21C" secondAttribute="bottom" constant="10" id="90x-z3-aIh"/>
                                                     <constraint firstItem="VtS-42-ar6" firstAttribute="top" secondItem="VMT-lj-Jwb" secondAttribute="top" id="Liy-dO-baH"/>
-                                                    <constraint firstAttribute="height" constant="500" id="MTU-Vy-gqO"/>
+                                                    <constraint firstAttribute="height" constant="600" id="MTU-Vy-gqO"/>
                                                     <constraint firstItem="VtS-42-ar6" firstAttribute="leading" secondItem="VMT-lj-Jwb" secondAttribute="leading" id="N9G-gO-1r5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0wi-eW-5wn" secondAttribute="trailing" constant="10" id="Rw2-yg-VdX"/>
                                                     <constraint firstItem="O0X-ak-21C" firstAttribute="leading" secondItem="VMT-lj-Jwb" secondAttribute="leading" constant="10" id="bk1-fU-ct4"/>
+                                                    <constraint firstItem="0wi-eW-5wn" firstAttribute="top" secondItem="1Pn-he-QXq" secondAttribute="bottom" constant="10" id="cmW-0a-4Qg"/>
+                                                    <constraint firstItem="1Pn-he-QXq" firstAttribute="leading" secondItem="VMT-lj-Jwb" secondAttribute="leading" constant="10" id="gYo-gg-HfD"/>
+                                                    <constraint firstItem="ExC-2g-3VC" firstAttribute="leading" secondItem="VMT-lj-Jwb" secondAttribute="leading" constant="10" id="k8k-go-Sn4"/>
                                                     <constraint firstAttribute="trailing" secondItem="O0X-ak-21C" secondAttribute="trailing" constant="10" id="mfz-wW-DmW"/>
                                                     <constraint firstAttribute="trailing" secondItem="VtS-42-ar6" secondAttribute="trailing" id="sFn-Fh-7x8"/>
+                                                    <constraint firstItem="ExC-2g-3VC" firstAttribute="top" secondItem="1Pn-he-QXq" secondAttribute="bottom" constant="20" id="uPk-Bw-70p"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="subviews">
-                                                        <exclude reference="1Pn-he-QXq"/>
-                                                        <exclude reference="0wi-eW-5wn"/>
-                                                        <exclude reference="ExC-2g-3VC"/>
-                                                    </mask>
-                                                </variation>
                                             </view>
                                         </subviews>
                                         <constraints>
