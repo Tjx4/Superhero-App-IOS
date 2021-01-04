@@ -525,8 +525,8 @@
                         <outlet property="cvAppearance" destination="0wi-eW-5wn" id="0SO-j9-bv3"/>
                         <outlet property="imgvHeroImage" destination="pYs-B3-eHO" id="FDI-2O-eFT"/>
                         <outlet property="lblAlterEgo" destination="0j6-uD-HYy" id="lEu-q4-n9w"/>
-                        <outlet property="lblApperance" destination="a87-Rq-2GD" id="k0j-50-dGo"/>
                         <outlet property="lblFullname" destination="wDi-Uw-Wpv" id="gH4-1z-olo"/>
+                        <outlet property="lblGender" destination="a87-Rq-2GD" id="Xvh-wq-31c"/>
                         <outlet property="lblHeight" destination="qs7-IS-KdZ" id="MvV-j9-ChD"/>
                         <outlet property="lblInteligence" destination="XO3-l9-axh" id="y5g-aa-gpP"/>
                         <outlet property="lblPlaceOfBirth" destination="4ug-ER-pXF" id="pqA-LS-bBt"/>
@@ -592,7 +592,7 @@
     </scenes>
     <designables>
         <designable name="dsr-PL-uUD">
-            <size key="intrinsicContentSize" width="179" height="34"/>
+            <size key="intrinsicContentSize" width="163" height="34"/>
         </designable>
         <designable name="nO0-JS-7Ih">
             <size key="intrinsicContentSize" width="400" height="266.5"/>
