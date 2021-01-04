@@ -3,7 +3,6 @@ import SDWebImage
 
 class ViewSuperheroViewController: UIViewController {
     
-    @IBOutlet weak var loadingContainer: UIView!
     @IBOutlet weak var alAppearance: UIActivityIndicatorView!
     @IBOutlet weak var txtSuperhero: UILabel!
     @IBOutlet weak var txtRealName: UILabel!
