@@ -16,6 +16,7 @@ class ViewSuperheroViewController: UIViewController {
     @IBOutlet weak var lblAlterEgo: UILabel!
     @IBOutlet weak var lblPlaceOfBirth: UILabel!
     @IBOutlet weak var lblGender: UILabel!
+    @IBOutlet weak var lblRace: UILabel!
     @IBOutlet weak var lblHeight: UILabel!
     @IBOutlet weak var lblWeight: UILabel!
     
@@ -26,10 +27,13 @@ class ViewSuperheroViewController: UIViewController {
     let superheroProvider = MoyaProvider<SuperheroService>()
     
     override func viewDidLoad() {
-        txtSuperhero.text = superhero?.name
         
         let url = superhero?.image?.url ?? ""
         imgvHeroImage.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
+        
+        txtSuperhero.text = superhero?.name
+        txtRealName.text = superhero?.biography?.fullName
+        txtPublisher.text = superhero?.biography?.publisher
         
         lblInteligence.text = superhero?.powerstats?.intelligence
         lblStrength.text = superhero?.powerstats?.strength
@@ -58,6 +62,7 @@ class ViewSuperheroViewController: UIViewController {
                     
                     //For demo purposes dynamic loading of data
                     self.lblGender.text = appearance.gender
+                    self.lblRace.text = appearance.race
                     self.lblHeight.text = appearance.height?[1]
                     self.lblWeight.text = appearance.weight?[1]
                     
