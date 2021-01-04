@@ -123,9 +123,21 @@ class SearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier {
+        case "viewHeroSegue" :
+            let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
+            viewSuperheroViewController.superhero = superheroes?[selectedIndex]
+            
+        case "viewFavouritesSegue" :
+            let favouritesTableViewController = segue.destination as! FavouritesTableViewController
+            
+        default:
+            var fdf = 0
+        }
+        
           if segue.identifier == "viewHeroSegue" {
               let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
-            
               viewSuperheroViewController.superhero = superheroes?[selectedIndex]
           }
       }
