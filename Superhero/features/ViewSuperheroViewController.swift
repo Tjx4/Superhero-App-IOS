@@ -1,5 +1,6 @@
 import UIKit
 import SDWebImage
+import Moya
 
 class ViewSuperheroViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class ViewSuperheroViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var imgvHeroImage: UIImageView!
     var superhero: Superhero?
+    let superheroProvider = MoyaProvider<SuperheroService>()
     
     override func viewDidLoad() {
         txtSuperhero.text = superhero?.name
@@ -36,10 +38,6 @@ class ViewSuperheroViewController: UIViewController {
         lblFullname.text = superhero?.biography?.fullName
         lblAlterEgo.text = superhero?.biography?.alterEgos
         lblPlaceOfBirth.text = superhero?.biography?.placeOfBirth
-        
-        lblGender.text = superhero?.appearance?.gender
-        lblHeight.text = superhero?.appearance?.height?[0]
-        lblWeight.text = superhero?.appearance?.weight?[0]
     }
     
     @IBAction func onMoreInfoClicked(_ sender: UIButton) {
@@ -48,5 +46,27 @@ class ViewSuperheroViewController: UIViewController {
         
         alAppearance.translatesAutoresizingMaskIntoConstraints = false
         alAppearance.startAnimating()
+        
+        let id = superhero?.id ?? ""
+        superheroProvider.request(.apearance(id: id)) { (result) in
+            
+            switch result {
+                case .success(let response) :
+                    self.alAppearance.isHidden = true
+                    
+                    let appearance = try! JSONDecoder().decode(Appearance.self, from: response.data)
+                    
+                    //For demo purposes dynamic loading of data
+                    self.lblGender.text = appearance.gender
+                    self.lblHeight.text = appearance.height?[1]
+                    self.lblWeight.text = appearance.weight?[1]
+                    
+                case .failure(let error) :
+                    self.alAppearance.isHidden = true
+                    print("Error: \(error)")
+             }
+        }
+        
+         
     }
 }
