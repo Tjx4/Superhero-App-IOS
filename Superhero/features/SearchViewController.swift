@@ -7,10 +7,11 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var superheroTableView: UITableView!
     @IBOutlet weak var txtSearch: SearchUITextField!
     @IBOutlet weak var activityLoader: UIActivityIndicatorView!
-    
+    @IBOutlet weak var lblNoresults: UILabel!
     let superheroProvider = MoyaProvider<SuperheroService>()
     var superheroes: [Superhero]?
     var selectedIndex: Int!
+    var searchTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +22,24 @@ class SearchViewController: UIViewController {
         superheroTableView.dataSource = self as! UITableViewDataSource
     
         self.txtSearch.delegate = self
+        // handle the editingChanged event by calling (textFieldDidEditingChanged(-:))
+            self.txtSearch.addTarget(self, action: #selector(textFieldDidEditingChanged(_:)), for: .editingChanged)
     }
     
-    func textFieldShouldReturn(userText: UITextField!) -> Bool {
-        userText.resignFirstResponder()
-        return true;
-    }
-    
-    @IBAction func onEditChanged(_ sender: SearchUITextField) {
-        let keywords = sender.text ?? ""
-        
-        if keywords == "man" || keywords == "captain"{
+    @objc func textFieldDidEditingChanged(_ textField: UITextField) {
+
+        if searchTimer != nil {
+            searchTimer?.invalidate()
+            searchTimer = nil
         }
-        else{
+     
+        searchTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(searchForKeyword(_:)), userInfo: textField.text!, repeats: false)
+    }
+
+    @objc func searchForKeyword(_ timer: Timer) {
+        let keywords = "\(timer.userInfo ?? "")"
+        
+        if keywords.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty{
             return
         }
         
@@ -41,10 +47,20 @@ class SearchViewController: UIViewController {
         activityLoader.translatesAutoresizingMaskIntoConstraints = false
         activityLoader.startAnimating()
         
+        
         searchForSuperHeroes(keywords: keywords)
     }
     
+    func textFieldShouldReturn(userText: UITextField!) -> Bool {
+        userText.resignFirstResponder()
+        return true;
+    }
+    
     func searchForSuperHeroes(keywords: String)  {
+        self.lblNoresults.isHidden = true
+        self.superheroes?.removeAll()
+        self.superheroTableView.reloadData()
+        
         superheroProvider.request(.search(keyword: keywords)) { (result) in
             
             switch result {
@@ -54,12 +70,25 @@ class SearchViewController: UIViewController {
                     let searchResult = try! JSONDecoder().decode(SearchResponse.self, from: response.data)
                     self.superheroes = searchResult.results
                     self.superheroTableView.reloadData()
+                    
+                    if (searchResult.results?.isEmpty ?? true) {
+                        self.showNoResults(keywords: keywords)
+                    }
               
                 case .failure(let error) :
                     self.activityLoader.isHidden = true
                     print("Error: \(error)")
+                    
+                    self.showNoResults(keywords: keywords)
+                    
              }
         }
+    }
+    
+    
+    func showNoResults(keywords: String){
+        self.lblNoresults.isHidden = false
+        self.lblNoresults.text = "No heroes found that match - \(keywords)"
     }
     
     

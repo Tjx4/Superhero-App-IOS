@@ -26,9 +26,6 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onEditChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="eRJ-FW-tQz"/>
-                                </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VFO-IG-yyk">
                                 <rect key="frame" x="10" y="109" width="49" height="43"/>
@@ -42,8 +39,18 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No heroes found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPb-Gf-jqz">
+                                <rect key="frame" x="10" y="193" width="107.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9AM-HA-eWN">
-                                <rect key="frame" x="197" y="183" width="20" height="20"/>
+                                <rect key="frame" x="197" y="193" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="aBT-rF-KzZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="sRK-9U-KIH"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,12 +59,14 @@
                             <constraint firstItem="VFO-IG-yyk" firstAttribute="top" secondItem="dsr-PL-uUD" secondAttribute="top" id="2PM-bL-qq8"/>
                             <constraint firstItem="VFO-IG-yyk" firstAttribute="leading" secondItem="dsr-PL-uUD" secondAttribute="leading" id="4tz-RK-bGk"/>
                             <constraint firstItem="dsr-PL-uUD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BbZ-Hs-piN"/>
-                            <constraint firstItem="9AM-HA-eWN" firstAttribute="top" secondItem="ojd-o3-eqf" secondAttribute="top" constant="10" id="Hg6-cz-xOw"/>
+                            <constraint firstItem="9AM-HA-eWN" firstAttribute="top" secondItem="ojd-o3-eqf" secondAttribute="top" constant="20" id="Hg6-cz-xOw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsr-PL-uUD" secondAttribute="trailing" constant="10" id="Hii-qI-pbO"/>
+                            <constraint firstItem="GPb-Gf-jqz" firstAttribute="leading" secondItem="ojd-o3-eqf" secondAttribute="leading" constant="10" id="JKE-FW-BG9"/>
                             <constraint firstAttribute="trailing" secondItem="ojd-o3-eqf" secondAttribute="trailing" id="LpV-es-dBC"/>
                             <constraint firstItem="ojd-o3-eqf" firstAttribute="top" secondItem="dsr-PL-uUD" secondAttribute="bottom" constant="20" id="VCr-KN-PcV"/>
                             <constraint firstItem="VFO-IG-yyk" firstAttribute="bottom" secondItem="dsr-PL-uUD" secondAttribute="bottom" id="e7m-DK-4A6"/>
                             <constraint firstItem="ojd-o3-eqf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eeV-AH-J8K"/>
+                            <constraint firstItem="GPb-Gf-jqz" firstAttribute="top" secondItem="ojd-o3-eqf" secondAttribute="top" constant="20" id="hu8-kE-Fua"/>
                             <constraint firstItem="dsr-PL-uUD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="i5v-fz-Ssz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ojd-o3-eqf" secondAttribute="bottom" id="r3o-Y9-sRm"/>
                             <constraint firstItem="9AM-HA-eWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEL-AG-EuA"/>
@@ -79,6 +88,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityLoader" destination="9AM-HA-eWN" id="LNW-yK-7o5"/>
+                        <outlet property="lblNoresults" destination="GPb-Gf-jqz" id="dKe-ti-H2N"/>
                         <outlet property="superheroTableView" destination="ojd-o3-eqf" id="JoE-6C-U0k"/>
                         <outlet property="txtSearch" destination="dsr-PL-uUD" id="PpT-Ml-LDT"/>
                         <segue destination="vQd-jH-cRn" kind="show" identifier="viewHeroSegue" id="yBR-Ae-Yc5"/>
@@ -594,7 +604,7 @@
     </scenes>
     <designables>
         <designable name="dsr-PL-uUD">
-            <size key="intrinsicContentSize" width="163" height="34"/>
+            <size key="intrinsicContentSize" width="179" height="34"/>
         </designable>
         <designable name="nO0-JS-7Ih">
             <size key="intrinsicContentSize" width="400" height="266.5"/>
