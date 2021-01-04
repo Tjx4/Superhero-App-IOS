@@ -11,5 +11,7 @@ struct Biography: Codable {
         case fullName = "full-name"
         case alterEgos = "alter-egos"
         case placeOfBirth = "place-of-birth"
+        case publisher = "publisher"
+        case alignment = "alignment"
    }
 }
