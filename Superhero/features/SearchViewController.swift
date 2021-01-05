@@ -136,10 +136,6 @@ class SearchViewController: UIViewController {
             var fdf = 0
         }
         
-          if segue.identifier == "viewHeroSegue" {
-              let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
-              viewSuperheroViewController.superhero = superheroes?[selectedIndex]
-          }
       }
 }
 

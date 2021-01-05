@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AARatingBar
 
 class FavouritesTableViewCell: UITableViewCell {
 

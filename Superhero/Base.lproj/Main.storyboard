@@ -533,12 +533,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="WSx-l6-4mo">
                         <barButtonItem key="backBarButtonItem" title="back" id="hJe-xz-h7y"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="fav_dark" id="scD-Ng-eaU">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="fav_dark" id="scD-Ng-eaU">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onSetFavouriteClicked:" destination="vQd-jH-cRn" id="kVN-pN-daJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="rate_black" id="pvT-Bf-8jx">
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <action selector="onRateHeroClicked:" destination="vQd-jH-cRn" id="GJN-TV-bnW"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="alAppearance" destination="PU4-7X-WxZ" id="Ys0-3V-D3C"/>
+                        <outlet property="biFavourite" destination="scD-Ng-eaU" id="Mmy-VS-g6g"/>
+                        <outlet property="biRate" destination="pvT-Bf-8jx" id="zaf-dN-0Of"/>
                         <outlet property="cvAppearance" destination="0wi-eW-5wn" id="0SO-j9-bv3"/>
                         <outlet property="imgvHeroImage" destination="pYs-B3-eHO" id="FDI-2O-eFT"/>
                         <outlet property="lblAlterEgo" destination="0j6-uD-HYy" id="lEu-q4-n9w"/>
@@ -578,10 +591,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="80" y="285" width="254" height="40"/>
+                                <rect key="frame" x="80" y="285" width="254" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="KY8-68-Pee"/>
+                                    <constraint firstAttribute="height" constant="45" id="KY8-68-Pee"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
@@ -605,6 +618,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="m0g-56-KJA"/>
                     <connections>
+                        <outlet property="imgvHeroImage" destination="nO0-JS-7Ih" id="8J1-dL-kYa"/>
+                        <outlet property="niTitle" destination="m0g-56-KJA" id="9HR-Uu-JWH"/>
                         <outlet property="rbRating" destination="o8X-M6-3Su" id="hMs-1W-Dj7"/>
                     </connections>
                 </viewController>
@@ -631,7 +646,7 @@
     </scenes>
     <designables>
         <designable name="dsr-PL-uUD">
-            <size key="intrinsicContentSize" width="163" height="34"/>
+            <size key="intrinsicContentSize" width="179" height="34"/>
         </designable>
         <designable name="nO0-JS-7Ih">
             <size key="intrinsicContentSize" width="400" height="266.5"/>
@@ -643,6 +658,7 @@
         <image name="logo_black" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="placeholder" width="400" height="266.5"/>
+        <image name="rate_black" width="24" height="24"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

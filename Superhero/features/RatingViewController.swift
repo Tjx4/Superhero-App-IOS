@@ -6,26 +6,24 @@
 //
 
 import UIKit
+import AARatingBar
 
 class RatingViewController: UIViewController {
 
+    @IBOutlet weak var niTitle: UINavigationItem!
+    @IBOutlet weak var imgvHeroImage: RoundedUIImageView!
     @IBOutlet weak var rbRating: AARatingBar!
-   
+    var superhero: Superhero?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        niTitle.title = superhero?.name
 
-        // Do any additional setup after loading the view.
+        let url = superhero?.image?.url ?? ""
+        imgvHeroImage.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
+        
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

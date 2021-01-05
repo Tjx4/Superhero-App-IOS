@@ -3,7 +3,9 @@ import SDWebImage
 import Moya
 
 class ViewSuperheroViewController: UIViewController {
-    
+
+    @IBOutlet weak var biFavourite: UIBarButtonItem!
+    @IBOutlet weak var biRate: UIBarButtonItem!
     @IBOutlet weak var alAppearance: UIActivityIndicatorView!
     @IBOutlet weak var txtSuperhero: UILabel!
     @IBOutlet weak var txtRealName: UILabel!
@@ -44,6 +46,19 @@ class ViewSuperheroViewController: UIViewController {
         lblPlaceOfBirth.text = superhero?.biography?.placeOfBirth
     }
     
+    
+    @IBAction func onSetFavouriteClicked(_ sender: UIBarButtonItem) {
+        
+       // biRate
+        //biFavourite
+    }
+    
+    @IBAction func onRateHeroClicked(_ sender: UIBarButtonItem) {
+        // biRate
+         //biFavourite
+            segueToScreen(segueIdentifier: "rateHeroSegue")
+    }
+    
     @IBAction func onMoreInfoClicked(_ sender: UIButton) {
         sender.isHidden = true
         cvAppearance.isHidden = false
@@ -74,4 +89,18 @@ class ViewSuperheroViewController: UIViewController {
         
          
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier {
+        case "rateHeroSegue" :
+            let ratingViewController = segue.destination as! RatingViewController
+            ratingViewController.superhero = superhero
+      
+        default:
+            var fdf = 0
+        }
+       
+      }
+
 }
