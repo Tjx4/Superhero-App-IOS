@@ -4,8 +4,8 @@ import Moya
 
 class ViewSuperheroViewController: UIViewController {
 
-    @IBOutlet weak var biFavourite: UIBarButtonItem!
-    @IBOutlet weak var biRate: UIBarButtonItem!
+   var biRate: UIBarButtonItem!
+    @IBOutlet var biFavourite: UIBarButtonItem!
     @IBOutlet weak var alAppearance: UIActivityIndicatorView!
     @IBOutlet weak var txtSuperhero: UILabel!
     @IBOutlet weak var txtRealName: UILabel!
@@ -30,6 +30,12 @@ class ViewSuperheroViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        biRate = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector( onRateHeroClicked(sender:)) )
+        biRate.tintColor = UIColor.black
+        biRate.image = UIImage(named: "rate_black.png")
+           
+        self.navigationItem.rightBarButtonItem = biFavourite
+        
         let url = superhero?.image?.url ?? ""
         imgvHeroImage.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
         
@@ -48,14 +54,12 @@ class ViewSuperheroViewController: UIViewController {
     
     
     @IBAction func onSetFavouriteClicked(_ sender: UIBarButtonItem) {
-        
-       // biRate
-        //biFavourite
+    
+        self.navigationItem.rightBarButtonItem = biRate
     }
     
-    @IBAction func onRateHeroClicked(_ sender: UIBarButtonItem) {
-        // biRate
-         //biFavourite
+    @objc func onRateHeroClicked(sender: UIBarButtonItem) {
+ 
             segueToScreen(segueIdentifier: "rateHeroSegue")
     }
     

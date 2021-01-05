@@ -533,25 +533,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="WSx-l6-4mo">
                         <barButtonItem key="backBarButtonItem" title="back" id="hJe-xz-h7y"/>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="fav_dark" id="scD-Ng-eaU">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="onSetFavouriteClicked:" destination="vQd-jH-cRn" id="kVN-pN-daJ"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="rate_black" id="pvT-Bf-8jx">
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <connections>
-                                    <action selector="onRateHeroClicked:" destination="vQd-jH-cRn" id="GJN-TV-bnW"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="fav_dark" id="scD-Ng-eaU">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onSetFavouriteClicked:" destination="vQd-jH-cRn" id="kVN-pN-daJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="alAppearance" destination="PU4-7X-WxZ" id="Ys0-3V-D3C"/>
-                        <outlet property="biFavourite" destination="scD-Ng-eaU" id="Mmy-VS-g6g"/>
-                        <outlet property="biRate" destination="pvT-Bf-8jx" id="zaf-dN-0Of"/>
+                        <outlet property="biFavourite" destination="scD-Ng-eaU" id="YD2-CP-wt0"/>
                         <outlet property="cvAppearance" destination="0wi-eW-5wn" id="0SO-j9-bv3"/>
                         <outlet property="imgvHeroImage" destination="pYs-B3-eHO" id="FDI-2O-eFT"/>
                         <outlet property="lblAlterEgo" destination="0j6-uD-HYy" id="lEu-q4-n9w"/>
@@ -658,7 +649,6 @@
         <image name="logo_black" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="placeholder" width="400" height="266.5"/>
-        <image name="rate_black" width="24" height="24"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
