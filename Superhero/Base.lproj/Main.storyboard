@@ -577,15 +577,36 @@
                                     <constraint firstAttribute="width" constant="120" id="l3n-ym-rPu"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
+                                <rect key="frame" x="80" y="285" width="254" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KY8-68-Pee"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.52998086460000005" green="0.81814010950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YVD-dg-h5P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="o8X-M6-3Su" firstAttribute="leading" secondItem="YVD-dg-h5P" secondAttribute="leading" constant="80" id="42v-aY-WIa"/>
                             <constraint firstItem="nO0-JS-7Ih" firstAttribute="top" secondItem="YVD-dg-h5P" secondAttribute="top" constant="36" id="8pq-hh-eKG"/>
+                            <constraint firstItem="YVD-dg-h5P" firstAttribute="trailing" secondItem="o8X-M6-3Su" secondAttribute="trailing" constant="80" id="GK6-My-08S"/>
+                            <constraint firstItem="o8X-M6-3Su" firstAttribute="top" secondItem="nO0-JS-7Ih" secondAttribute="bottom" constant="41" id="rAV-v9-Es6"/>
                             <constraint firstItem="nO0-JS-7Ih" firstAttribute="centerX" secondItem="jki-v4-j3o" secondAttribute="centerX" id="wRM-YC-ODj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m0g-56-KJA"/>
+                    <connections>
+                        <outlet property="rbRating" destination="o8X-M6-3Su" id="hMs-1W-Dj7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMq-Kf-yoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

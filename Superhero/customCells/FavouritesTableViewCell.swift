@@ -9,6 +9,8 @@ import UIKit
 
 class FavouritesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var rbCurrentRating: AARatingBar!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

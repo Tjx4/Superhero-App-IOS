@@ -9,6 +9,8 @@ import UIKit
 
 class RatingViewController: UIViewController {
 
+    @IBOutlet weak var rbRating: AARatingBar!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
