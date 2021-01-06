@@ -21,20 +21,20 @@
                         <rect key="frame" x="5" y="5" width="192" height="205"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qra-S6-P7l">
-                                <rect key="frame" x="10" y="129" width="172" height="21"/>
+                                <rect key="frame" x="10" y="119" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rPw-Tf-tkw" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
-                                <rect key="frame" x="41" y="9" width="110" height="110"/>
+                                <rect key="frame" x="46" y="9" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="3gl-4i-FlG"/>
-                                    <constraint firstAttribute="height" constant="110" id="zmX-Mg-Iji"/>
+                                    <constraint firstAttribute="width" constant="100" id="3gl-4i-FlG"/>
+                                    <constraint firstAttribute="height" constant="100" id="zmX-Mg-Iji"/>
                                 </constraints>
                             </imageView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-0r-aIx" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="10" y="158" width="172" height="30"/>
+                                <rect key="frame" x="10" y="148" width="172" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0Yi-9T-tC8"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.52998086460000005" green="0.81814010950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.094941877258028592" green="0.53653254533678751" blue="0.45766544322423747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -64,7 +64,6 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
                 <constraint firstItem="Rio-XQ-vgD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ljb-Tf-HZ8"/>
                 <constraint firstAttribute="bottom" secondItem="Rio-XQ-vgD" secondAttribute="bottom" constant="5" id="OS7-O3-qZU"/>
@@ -89,9 +88,6 @@
         <image name="placeholder" width="400" height="266.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
