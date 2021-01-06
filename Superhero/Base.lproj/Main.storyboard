@@ -6,7 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,25 +118,39 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gc8-uG-1EW">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gc8-uG-1EW" customClass="FavouritesCollectionViewCell" customModule="Superhero" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OaI-pg-QFN">
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
+                                        </view>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-su-gGD">
+                                <rect key="frame" x="20" y="76" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lIX-Yf-nZv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="wJV-su-gGD" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" constant="20" id="2HC-xt-aNn"/>
+                            <constraint firstItem="wJV-su-gGD" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" constant="20" id="L3G-Be-JQY"/>
+                            <constraint firstItem="lIX-Yf-nZv" firstAttribute="trailing" secondItem="wJV-su-gGD" secondAttribute="trailing" constant="20" id="bNb-3c-izu"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="gkS-gT-yHm"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="p81-wB-CA4"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="r0X-rt-hc6"/>
                             <constraint firstAttribute="bottom" secondItem="jKd-Uu-CHw" secondAttribute="bottom" id="uEj-3R-HKh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wJV-su-gGD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite superhero" id="Siw-Hi-RWV">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="fav_dark" id="16Y-ib-8nz">
@@ -152,6 +165,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cvFavSuperheroes" destination="jKd-Uu-CHw" id="dcf-m7-hk0"/>
+                        <outlet property="lblNoFavourites" destination="wJV-su-gGD" id="8wV-R0-pzs"/>
                         <segue destination="vQd-jH-cRn" kind="show" identifier="viewFavHeroSegue" id="Ds8-yD-NBM"/>
                     </connections>
                 </viewController>
@@ -612,10 +626,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="80" y="262" width="254" height="45"/>
+                                <rect key="frame" x="80" y="262" width="254" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="KY8-68-Pee"/>
+                                    <constraint firstAttribute="height" constant="50" id="KY8-68-Pee"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">

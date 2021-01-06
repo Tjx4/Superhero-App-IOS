@@ -3,6 +3,7 @@ import UIKit
 
 class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet var lblNoFavourites: UILabel!
     @IBOutlet var cvFavSuperheroes: UICollectionView!
     var superheroes: [SuperheroTable]?
     var selectedIndex: Int!
@@ -52,15 +53,14 @@ extension FavouritesViewController {
         let superhero: SuperheroTable? = superheroes?[indexPath.row]
         favouritesCollectionViewCell.config(superhero: superhero)
         
-        
         let bgColorView = UIView()
         bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")
         favouritesCollectionViewCell.selectedBackgroundView = bgColorView
         
         return favouritesCollectionViewCell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+      
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellsPerRow = 2
         let inset: CGFloat = 10
         let minimumLineSpacing: CGFloat = 0
@@ -71,7 +71,7 @@ extension FavouritesViewController {
        
         let itemWidth = ((collectionViewWidth - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
         
-        let itemHeight = CGFloat(230.0)
+        let itemHeight = CGFloat(220.0)
         
         return CGSize(width: itemWidth, height: itemHeight)
     }
