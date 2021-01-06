@@ -10,13 +10,14 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        cvFavSuperheroes?.contentInsetAdjustmentBehavior = .always
         cvFavSuperheroes.register(FavouritesCollectionViewCell.nib(), forCellWithReuseIdentifier: FavouritesCollectionViewCell.identifier)
         cvFavSuperheroes.delegate = self as UICollectionViewDelegate
         cvFavSuperheroes.dataSource = self as UICollectionViewDataSource
-        //cvFavSuperheroes.layout
     }
     
-    @IBAction func onCloseClicked(_ sender: Any) {
+    @IBAction func onCloseButtonClicked(_ sender: Any) {
+
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -39,9 +40,6 @@ extension FavouritesViewController {
         selectedIndex = indexPath.item
         segueToScreen(segueIdentifier: "viewFavHeroSegue")
     }
-}
-
-extension FavouritesViewController {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return superheroes?.count ?? 0
@@ -60,6 +58,17 @@ extension FavouritesViewController {
         favouritesCollectionViewCell.selectedBackgroundView = bgColorView
         
         return favouritesCollectionViewCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellsPerRow = 2
+        let inset: CGFloat = 10
+        let minimumLineSpacing: CGFloat = 10
+        let minimumInteritemSpacing: CGFloat = 10
+        
+        let marginsAndInsets = inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
+        let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
+        return CGSize(width: itemWidth, height: itemWidth)
     }
     
 }

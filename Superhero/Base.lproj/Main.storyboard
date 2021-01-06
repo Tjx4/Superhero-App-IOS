@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="1777" y="94"/>
         </scene>
-        <!--Favourites View Controller-->
+        <!--Favourite superhero-->
         <scene sceneID="d3k-wb-gbr">
             <objects>
                 <viewController id="VvI-4H-hDY" customClass="FavouritesViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,48 +109,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-j5-Hgs">
-                                <rect key="frame" x="0.0" y="56" width="414" height="62"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eg-TB-prX">
-                                        <rect key="frame" x="374" y="16" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="5pw-PZ-gab"/>
-                                            <constraint firstAttribute="width" constant="30" id="l2P-Zs-OFy"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="close_black"/>
-                                        <connections>
-                                            <action selector="onCloseClicked:" destination="VvI-4H-hDY" eventType="touchUpInside" id="i4u-PE-yJu"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav_dark" translatesAutoresizingMaskIntoConstraints="NO" id="cmB-QP-Ogv">
-                                        <rect key="frame" x="19" y="21" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="sFw-Cn-sa2"/>
-                                            <constraint firstAttribute="height" constant="20" id="sX5-1a-qAo"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite superhero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-hJ-io1">
-                                        <rect key="frame" x="49" y="20.5" width="315" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="5eg-TB-prX" firstAttribute="leading" secondItem="Ag1-hJ-io1" secondAttribute="trailing" constant="10" id="0pr-5T-GDg"/>
-                                    <constraint firstItem="Ag1-hJ-io1" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="BA3-pL-hoo"/>
-                                    <constraint firstAttribute="height" constant="62" id="KiD-ft-SPM"/>
-                                    <constraint firstAttribute="trailing" secondItem="5eg-TB-prX" secondAttribute="trailing" constant="10" id="MMj-YD-SEh"/>
-                                    <constraint firstItem="cmB-QP-Ogv" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="MoZ-4F-dI2"/>
-                                    <constraint firstItem="Ag1-hJ-io1" firstAttribute="leading" secondItem="cmB-QP-Ogv" secondAttribute="trailing" constant="10" id="bCN-aV-END"/>
-                                    <constraint firstItem="cmB-QP-Ogv" firstAttribute="leading" secondItem="oMa-j5-Hgs" secondAttribute="leading" constant="19" id="hgs-dv-igp"/>
-                                    <constraint firstItem="5eg-TB-prX" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="kXA-ZT-CQU"/>
-                                </constraints>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-Uu-CHw">
-                                <rect key="frame" x="0.0" y="126" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gza-Ov-KSL">
                                     <size key="itemSize" width="128" height="128"/>
@@ -173,16 +133,23 @@
                         <viewLayoutGuide key="safeArea" id="lIX-Yf-nZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jKd-Uu-CHw" firstAttribute="top" secondItem="oMa-j5-Hgs" secondAttribute="bottom" constant="8" symbolic="YES" id="4PS-yO-3xt"/>
-                            <constraint firstItem="oMa-j5-Hgs" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="DM6-Iz-YrH"/>
-                            <constraint firstItem="oMa-j5-Hgs" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="O7q-lR-cl0"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="gkS-gT-yHm"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="p81-wB-CA4"/>
-                            <constraint firstItem="oMa-j5-Hgs" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="tPW-kb-Aka"/>
+                            <constraint firstItem="jKd-Uu-CHw" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="r0X-rt-hc6"/>
                             <constraint firstAttribute="bottom" secondItem="jKd-Uu-CHw" secondAttribute="bottom" id="uEj-3R-HKh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Siw-Hi-RWV"/>
+                    <navigationItem key="navigationItem" title="Favourite superhero" id="Siw-Hi-RWV">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="fav_dark" id="16Y-ib-8nz">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="close_black" id="q95-vg-5Bq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onCloseButtonClicked:" destination="VvI-4H-hDY" id="9IF-xU-ifA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cvFavSuperheroes" destination="jKd-Uu-CHw" id="dcf-m7-hk0"/>
                         <segue destination="vQd-jH-cRn" kind="push" identifier="viewFavHeroSegue" id="Ds8-yD-NBM"/>
@@ -628,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMK-Yf-s7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="77"/>
+            <point key="canvasLocation" x="2712" y="112"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="4H7-YI-FEX">
@@ -680,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMq-Kf-yoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="77"/>
+            <point key="canvasLocation" x="3532" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eGd-me-CFq">
