@@ -3,13 +3,21 @@ import UIKit
 
 class FavouritesViewController: UIViewController {
 
+    @IBOutlet var tvFavSuperheroes: UITableView!
     var superheroes: [SuperheroTable]?
     var selectedIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tvFavSuperheroes.register(FavouritesTableViewCell.nib(), forCellReuseIdentifier: FavouritesTableViewCell.identifier)
+        tvFavSuperheroes.delegate = self as UITableViewDelegate
+        tvFavSuperheroes.dataSource = self as UITableViewDataSource
+    
+    }
+    
+    @IBAction func onCloseClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
