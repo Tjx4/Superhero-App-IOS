@@ -90,28 +90,7 @@ class SearchViewController: UIViewController {
         self.lblNoresults.isHidden = false
         self.lblNoresults.text = "No heroes found that match - \(keywords)"
     }
-    
-    
-/*
-     
-     let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
-     print("json = \(json)")
-     
-        var superhero = Superhero()
-        var image = Image()
-        image.url = "http://appicsoftware.co.za/api/Platinum_access_backend/1/profpic.jpeg"
-        superhero.image = image
-        superhero.name = "My man"
-        
-        var superhero2 = Superhero()
-        var image2 = Image()
-        image2.url = "http://appicsoftware.co.za/api/Platinum_access_backend/2/profpic.jpeg"
-        superhero2.image = image2
-        superhero2.name = "My lady"
-        
-        superheroes = [superhero, superhero2]
-    
-*/
+
     @IBAction func onViewFavouritesClicked(_ sender: Any) {
         segueToScreen(segueIdentifier: "viewFavouritesSegue")
     }
@@ -131,6 +110,22 @@ class SearchViewController: UIViewController {
             
         case "viewFavouritesSegue" :
             let favouritesTableViewController = segue.destination as! FavouritesTableViewController
+            
+            var hero1 = SuperheroTable()
+            hero1.name = superheroes?[0].name
+            hero1.intelligence = superheroes?[0].powerstats?.intelligence
+            hero1.strength = superheroes?[0].powerstats?.strength
+            hero1.speed = superheroes?[0].powerstats?.speed
+            hero1.fullName = superheroes?[0].biography?.fullName
+            hero1.alterEgos = superheroes?[0].biography?.alterEgos
+            hero1.placeOfBirth = superheroes?[0].biography?.placeOfBirth
+            hero1.publisher = superheroes?[0].biography?.publisher
+            hero1.rating = 3.0
+            hero1.imageUrl = superheroes?[0].image?.url
+            
+            var superheroes = [hero1]
+            
+            favouritesTableViewController.tableView.dataSource = superheroes as! UITableViewDataSource
             
         default:
             var fdf = 0
