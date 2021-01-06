@@ -17,6 +17,8 @@
 		7C27C9F7259F567F0086CA25 /* SuperheroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27C9F6259F567F0086CA25 /* SuperheroTests.swift */; };
 		7C27CA02259F567F0086CA25 /* SuperheroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27CA01259F567F0086CA25 /* SuperheroUITests.swift */; };
 		7C4AB0E925A5779E00B934FD /* SuperheroTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4AB0E825A5779E00B934FD /* SuperheroTable.swift */; };
+		7C4AB0EE25A5843900B934FD /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4AB0ED25A5843900B934FD /* FavouritesViewController.swift */; };
+		7C4AB0F625A587F400B934FD /* SuperheroTableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4AB0F525A587F400B934FD /* SuperheroTableExtensions.swift */; };
 		7C5751D325A22FE600FB4888 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5751D225A22FE600FB4888 /* RatingViewController.swift */; };
 		7C5793A1259F94EC0082CAD0 /* SearchUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */; };
 		7C5793AD259F95800082CAD0 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5793AC259F95800082CAD0 /* ColorHelper.swift */; };
@@ -29,7 +31,6 @@
 		7C57942325A05C050082CAD0 /* SuperheroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57942125A05C050082CAD0 /* SuperheroTableViewCell.swift */; };
 		7C57942425A05C050082CAD0 /* SuperheroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C57942225A05C050082CAD0 /* SuperheroTableViewCell.xib */; };
 		7C57942925A05C3F0082CAD0 /* RoundedUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */; };
-		7C57942E25A084070082CAD0 /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57942D25A084070082CAD0 /* FavouritesTableViewController.swift */; };
 		7C57943425A093210082CAD0 /* SuperheroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57943325A093210082CAD0 /* SuperheroService.swift */; };
 		7C57943C25A0A9D80082CAD0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57943B25A0A9D80082CAD0 /* SearchResponse.swift */; };
 		7C57944B25A0CE360082CAD0 /* PaddedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57944A25A0CE360082CAD0 /* PaddedImageView.swift */; };
@@ -80,6 +81,8 @@
 		7C27CA01259F567F0086CA25 /* SuperheroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroUITests.swift; sourceTree = "<group>"; };
 		7C27CA03259F567F0086CA25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C4AB0E825A5779E00B934FD /* SuperheroTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTable.swift; sourceTree = "<group>"; };
+		7C4AB0ED25A5843900B934FD /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		7C4AB0F525A587F400B934FD /* SuperheroTableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTableExtensions.swift; sourceTree = "<group>"; };
 		7C5751D225A22FE600FB4888 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUITextField.swift; sourceTree = "<group>"; };
 		7C5793AC259F95800082CAD0 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
@@ -92,7 +95,6 @@
 		7C57942125A05C050082CAD0 /* SuperheroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTableViewCell.swift; sourceTree = "<group>"; };
 		7C57942225A05C050082CAD0 /* SuperheroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroTableViewCell.xib; sourceTree = "<group>"; };
 		7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIImageView.swift; sourceTree = "<group>"; };
-		7C57942D25A084070082CAD0 /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		7C57943325A093210082CAD0 /* SuperheroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroService.swift; sourceTree = "<group>"; };
 		7C57943B25A0A9D80082CAD0 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		7C57944A25A0CE360082CAD0 /* PaddedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedImageView.swift; sourceTree = "<group>"; };
@@ -246,8 +248,8 @@
 			children = (
 				7C27C9E3259F567C0086CA25 /* SearchViewController.swift */,
 				7C5793D025A03E7B0082CAD0 /* ViewSuperheroViewController.swift */,
-				7C57942D25A084070082CAD0 /* FavouritesTableViewController.swift */,
 				7C5751D225A22FE600FB4888 /* RatingViewController.swift */,
+				7C4AB0ED25A5843900B934FD /* FavouritesViewController.swift */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 				7C5793D925A03F700082CAD0 /* UIViewControllerExtensions.swift */,
 				7C57941225A054930082CAD0 /* UIImageViewExtensions.swift */,
 				7C57947425A1AA070082CAD0 /* UIImageExtension.swift */,
+				7C4AB0F525A587F400B934FD /* SuperheroTableExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -492,9 +495,11 @@
 				7C5793D125A03E7B0082CAD0 /* ViewSuperheroViewController.swift in Sources */,
 				7C27C9E0259F567C0086CA25 /* AppDelegate.swift in Sources */,
 				7C57946B25A1A73C0082CAD0 /* Work.swift in Sources */,
+				7C4AB0EE25A5843900B934FD /* FavouritesViewController.swift in Sources */,
 				7C57944B25A0CE360082CAD0 /* PaddedImageView.swift in Sources */,
 				7C57945C25A1A6430082CAD0 /* PowerStats.swift in Sources */,
 				7C27C9E2259F567C0086CA25 /* SceneDelegate.swift in Sources */,
+				7C4AB0F625A587F400B934FD /* SuperheroTableExtensions.swift in Sources */,
 				7C5793A1259F94EC0082CAD0 /* SearchUITextField.swift in Sources */,
 				7C5793E025A03FE10082CAD0 /* Superhero.swift in Sources */,
 				7C57946125A1A6AC0082CAD0 /* Biography.swift in Sources */,
@@ -505,7 +510,6 @@
 				7C5793E525A041220082CAD0 /* Image.swift in Sources */,
 				7C57947F25A1CE2F0082CAD0 /* MoreButton.swift in Sources */,
 				7C57942925A05C3F0082CAD0 /* RoundedUIImageView.swift in Sources */,
-				7C57942E25A084070082CAD0 /* FavouritesTableViewController.swift in Sources */,
 				7C57947A25A1AB220082CAD0 /* CardView.swift in Sources */,
 				7C5F3B2C25A38397007DCC0A /* FavouritesTableViewCell.swift in Sources */,
 				7C57943425A093210082CAD0 /* SuperheroService.swift in Sources */,

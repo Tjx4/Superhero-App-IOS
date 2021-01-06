@@ -1,15 +1,9 @@
-//
-//  FavouritesTableViewCell.swift
-//  Superhero
-//
-//  Created by Tshepo Mahlaula on 2021/01/04.
-//
-
 import UIKit
 import AARatingBar
 
 class FavouritesTableViewCell: UITableViewCell {
-
+    
+    static let identifier = "FavouritesTableViewCell"
     @IBOutlet var imgSuperhero: RoundedUIImageView!
     @IBOutlet var lblName: UILabel!
     @IBOutlet weak var rbCurrentRating: AARatingBar!

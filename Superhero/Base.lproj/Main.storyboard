@@ -93,40 +93,83 @@
                         <outlet property="superheroTableView" destination="ojd-o3-eqf" id="JoE-6C-U0k"/>
                         <outlet property="txtSearch" destination="dsr-PL-uUD" id="PpT-Ml-LDT"/>
                         <segue destination="vQd-jH-cRn" kind="show" identifier="viewHeroSegue" id="yBR-Ae-Yc5"/>
-                        <segue destination="bFp-mB-Zur" kind="presentation" identifier="viewFavouritesSegue" id="raC-gY-5kw"/>
+                        <segue destination="VvI-4H-hDY" kind="presentation" identifier="viewFavouriteSuperheroesSegue" id="Br4-WZ-MZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="94"/>
         </scene>
-        <!--Favourites Table View Controller-->
-        <scene sceneID="cAn-2O-GMb">
+        <!--Favourites View Controller-->
+        <scene sceneID="d3k-wb-gbr">
             <objects>
-                <tableViewController id="bFp-mB-Zur" customClass="FavouritesTableViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MdQ-BQ-JD6">
+                <viewController id="VvI-4H-hDY" customClass="FavouritesViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fYd-Ud-RyQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-j5-Hgs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eg-TB-prX">
+                                        <rect key="frame" x="371" y="13.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="5pw-PZ-gab"/>
+                                            <constraint firstAttribute="width" constant="35" id="l2P-Zs-OFy"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="close_black"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav_dark" translatesAutoresizingMaskIntoConstraints="NO" id="cmB-QP-Ogv">
+                                        <rect key="frame" x="19" y="21" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="sFw-Cn-sa2"/>
+                                            <constraint firstAttribute="height" constant="20" id="sX5-1a-qAo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite superhero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-hJ-io1">
+                                        <rect key="frame" x="49" y="20.5" width="312" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5eg-TB-prX" firstAttribute="leading" secondItem="Ag1-hJ-io1" secondAttribute="trailing" constant="10" id="0pr-5T-GDg"/>
+                                    <constraint firstItem="Ag1-hJ-io1" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="BA3-pL-hoo"/>
+                                    <constraint firstAttribute="height" constant="62" id="KiD-ft-SPM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5eg-TB-prX" secondAttribute="trailing" constant="8" id="MMj-YD-SEh"/>
+                                    <constraint firstItem="cmB-QP-Ogv" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="MoZ-4F-dI2"/>
+                                    <constraint firstItem="Ag1-hJ-io1" firstAttribute="leading" secondItem="cmB-QP-Ogv" secondAttribute="trailing" constant="10" id="bCN-aV-END"/>
+                                    <constraint firstItem="cmB-QP-Ogv" firstAttribute="leading" secondItem="oMa-j5-Hgs" secondAttribute="leading" constant="19" id="hgs-dv-igp"/>
+                                    <constraint firstItem="5eg-TB-prX" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="kXA-ZT-CQU"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5h4-Vu-tlv">
+                                <rect key="frame" x="0.0" y="62" width="414" height="780"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lIX-Yf-nZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XNz-79-OCs">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XNz-79-OCs" id="nuq-ge-KMQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bFp-mB-Zur" id="8lq-eb-tfi"/>
-                            <outlet property="delegate" destination="bFp-mB-Zur" id="dIR-uE-0qJ"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="szZ-Tx-cVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="5h4-Vu-tlv" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="ByS-kA-Vwh"/>
+                            <constraint firstItem="oMa-j5-Hgs" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="DM6-Iz-YrH"/>
+                            <constraint firstItem="oMa-j5-Hgs" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="O7q-lR-cl0"/>
+                            <constraint firstAttribute="bottom" secondItem="5h4-Vu-tlv" secondAttribute="bottom" id="ZtA-JN-Zlg"/>
+                            <constraint firstItem="5h4-Vu-tlv" firstAttribute="top" secondItem="oMa-j5-Hgs" secondAttribute="bottom" id="cEA-kD-sic"/>
+                            <constraint firstItem="5h4-Vu-tlv" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="q1Z-6A-vQw"/>
+                            <constraint firstItem="oMa-j5-Hgs" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="tPW-kb-Aka"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="vQd-jH-cRn" kind="presentation" identifier="viewFavHeroSegue" modalPresentationStyle="fullScreen" id="Ds8-yD-NBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUE-7H-wNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="829"/>
+            <point key="canvasLocation" x="1776.8115942028987" y="838.39285714285711"/>
         </scene>
         <!--View Superhero View Controller-->
         <scene sceneID="Vc6-El-6hi">
@@ -137,13 +180,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-B3-eHO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="280"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="azf-eS-yYf"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cG-Xv-iVc">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alP-9L-DOJ" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
@@ -571,18 +614,18 @@
             <objects>
                 <viewController id="nVq-UU-Qe2" customClass="RatingViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jki-v4-j3o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-JS-7Ih" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
-                                <rect key="frame" x="147" y="124" width="120" height="120"/>
+                                <rect key="frame" x="147" y="36" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="0BK-k1-z7x"/>
                                     <constraint firstAttribute="width" constant="120" id="l3n-ym-rPu"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="80" y="285" width="254" height="45"/>
+                                <rect key="frame" x="80" y="197" width="254" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="KY8-68-Pee"/>
@@ -637,13 +680,17 @@
     </scenes>
     <designables>
         <designable name="dsr-PL-uUD">
-            <size key="intrinsicContentSize" width="179" height="34"/>
+            <size key="intrinsicContentSize" width="163" height="34"/>
         </designable>
         <designable name="nO0-JS-7Ih">
             <size key="intrinsicContentSize" width="400" height="266.5"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ds8-yD-NBM"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="close_black" width="24" height="24"/>
         <image name="fav_dark" width="24" height="24"/>
         <image name="favourites_list" width="36" height="36"/>
         <image name="logo_black" width="32" height="32"/>

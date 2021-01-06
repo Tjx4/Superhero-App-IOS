@@ -92,7 +92,7 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func onViewFavouritesClicked(_ sender: Any) {
-        segueToScreen(segueIdentifier: "viewFavouritesSegue")
+        segueToScreen(segueIdentifier: "viewFavouriteSuperheroesSegue")
     }
     
     @IBAction func onLogoClicked(_ sender: Any) {
@@ -108,8 +108,8 @@ class SearchViewController: UIViewController {
             let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
             viewSuperheroViewController.superhero = superheroes?[selectedIndex]
             
-        case "viewFavouritesSegue" :
-            let favouritesTableViewController = segue.destination as! FavouritesTableViewController
+        case "viewFavouriteSuperheroesSegue" :
+            let favouritesViewController = segue.destination as! FavouritesViewController
             
             var hero1 = SuperheroTable()
             hero1.name = superheroes?[0].name
@@ -125,13 +125,13 @@ class SearchViewController: UIViewController {
             
             var superheroes = [hero1]
             
-            favouritesTableViewController.tableView.dataSource = superheroes as! UITableViewDataSource
+            favouritesViewController.superheroes = superheroes 
             
         default:
-            var fdf = 0
+            var fdf = 0 // Todo Remove
         }
         
-      }
+   }
 }
 
 extension SearchViewController: UITableViewDelegate {
