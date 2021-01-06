@@ -1,16 +1,14 @@
-//
-//  FavouritesCollectionViewCell.swift
-//  Superhero
-//
-//  Created by Tshepo Mahlaula on 2021/01/06.
-//
-
 import UIKit
+import AARatingBar
 
 class FavouritesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var imgSuperhero: RoundedUIImageView!
+    
+    @IBOutlet var lblName: UILabel!
     static let identifier = "FavouritesCollectionViewCell"
     
+    @IBOutlet var rbCurrentRating: AARatingBar!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,11 +20,11 @@ class FavouritesCollectionViewCell: UICollectionViewCell {
     
     public func config(superhero: SuperheroTable?){
         
-       // lblName.text = superhero?.name
+        lblName.text = superhero?.name
         
-      //  imgSuperhero.sd_setImage(with: URL(string: superhero?.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        imgSuperhero.sd_setImage(with: URL(string: superhero?.imageUrl ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
         
-      //  rbCurrentRating.value = CGFloat(superhero?.rating ?? 0.0)
+        rbCurrentRating.value = CGFloat(superhero?.rating ?? 0.0)
   
     }
 }

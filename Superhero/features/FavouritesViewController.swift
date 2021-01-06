@@ -13,6 +13,7 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
         cvFavSuperheroes.register(FavouritesCollectionViewCell.nib(), forCellWithReuseIdentifier: FavouritesCollectionViewCell.identifier)
         cvFavSuperheroes.delegate = self as UICollectionViewDelegate
         cvFavSuperheroes.dataSource = self as UICollectionViewDataSource
+        //cvFavSuperheroes.layout
     }
     
     @IBAction func onCloseClicked(_ sender: Any) {

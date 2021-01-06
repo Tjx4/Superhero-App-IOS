@@ -109,7 +109,9 @@ class SearchViewController: UIViewController {
             viewSuperheroViewController.superhero = superheroes?[selectedIndex]
             
         case "viewFavouriteSuperheroesSegue" :
-            let favouritesViewController = segue.destination as! FavouritesViewController
+            let uINavigationController = segue.destination as! UINavigationController
+            
+            let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
             
             //Todo remove
             var hero1 = SuperheroTable()
