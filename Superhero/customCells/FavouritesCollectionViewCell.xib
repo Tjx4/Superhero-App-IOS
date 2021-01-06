@@ -17,25 +17,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="202" height="215"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-XQ-vgD" userLabel="ContentView">
-                        <rect key="frame" x="0.0" y="0.0" width="202" height="215"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-XQ-vgD" userLabel="ContentView" customClass="CardView" customModule="Superhero" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="192" height="205"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qra-S6-P7l">
-                                <rect key="frame" x="10" y="139" width="182" height="21"/>
+                                <rect key="frame" x="10" y="129" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rPw-Tf-tkw" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
-                                <rect key="frame" x="41" y="9" width="120" height="120"/>
+                                <rect key="frame" x="41" y="9" width="110" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="3gl-4i-FlG"/>
-                                    <constraint firstAttribute="height" constant="120" id="zmX-Mg-Iji"/>
+                                    <constraint firstAttribute="width" constant="110" id="3gl-4i-FlG"/>
+                                    <constraint firstAttribute="height" constant="110" id="zmX-Mg-Iji"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-0r-aIx" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="18" y="168" width="167" height="30"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-0r-aIx" customClass="AARatingBar" customModule="AARatingBar">
+                                <rect key="frame" x="10" y="158" width="172" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0Yi-9T-tC8"/>
                                 </constraints>
@@ -51,10 +50,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mhb-0r-aIx" firstAttribute="leading" secondItem="Rio-XQ-vgD" secondAttribute="leading" constant="10" id="GyG-WE-zyv"/>
                             <constraint firstItem="qra-S6-P7l" firstAttribute="leading" secondItem="Rio-XQ-vgD" secondAttribute="leading" constant="10" id="QBc-0c-4g1"/>
                             <constraint firstItem="mhb-0r-aIx" firstAttribute="top" secondItem="qra-S6-P7l" secondAttribute="bottom" constant="8" symbolic="YES" id="brc-LX-KGO"/>
                             <constraint firstItem="rPw-Tf-tkw" firstAttribute="centerX" secondItem="Rio-XQ-vgD" secondAttribute="centerX" id="d6U-yb-OS8"/>
+                            <constraint firstAttribute="trailing" secondItem="mhb-0r-aIx" secondAttribute="trailing" constant="10" id="euk-wY-PSy"/>
                             <constraint firstItem="rPw-Tf-tkw" firstAttribute="top" secondItem="Rio-XQ-vgD" secondAttribute="top" constant="9" id="gQr-xY-K6j"/>
+                            <constraint firstItem="mhb-0r-aIx" firstAttribute="centerX" secondItem="Rio-XQ-vgD" secondAttribute="centerX" id="k6B-LP-Fv0"/>
                             <constraint firstItem="qra-S6-P7l" firstAttribute="top" secondItem="rPw-Tf-tkw" secondAttribute="bottom" constant="10" id="sRY-hS-bHj"/>
                             <constraint firstAttribute="trailing" secondItem="qra-S6-P7l" secondAttribute="trailing" constant="10" id="xSM-hX-RVF"/>
                         </constraints>
@@ -62,11 +64,12 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Rio-XQ-vgD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ljb-Tf-HZ8"/>
-                <constraint firstAttribute="bottom" secondItem="Rio-XQ-vgD" secondAttribute="bottom" id="OS7-O3-qZU"/>
-                <constraint firstAttribute="trailing" secondItem="Rio-XQ-vgD" secondAttribute="trailing" id="fFT-Wg-tku"/>
-                <constraint firstItem="Rio-XQ-vgD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lRg-4c-TVU"/>
+                <constraint firstItem="Rio-XQ-vgD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ljb-Tf-HZ8"/>
+                <constraint firstAttribute="bottom" secondItem="Rio-XQ-vgD" secondAttribute="bottom" constant="5" id="OS7-O3-qZU"/>
+                <constraint firstAttribute="trailing" secondItem="Rio-XQ-vgD" secondAttribute="trailing" constant="5" id="fFT-Wg-tku"/>
+                <constraint firstItem="Rio-XQ-vgD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="lRg-4c-TVU"/>
             </constraints>
             <size key="customSize" width="202" height="215"/>
             <connections>

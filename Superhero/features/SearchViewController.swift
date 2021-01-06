@@ -115,6 +115,7 @@ class SearchViewController: UIViewController {
             
             //Todo remove
             var hero1 = SuperheroTable()
+            hero1.id = superheroes?[0].id
             hero1.name = superheroes?[0].name
             hero1.intelligence = superheroes?[0].powerstats?.intelligence
             hero1.strength = superheroes?[0].powerstats?.strength
@@ -127,6 +128,7 @@ class SearchViewController: UIViewController {
             hero1.imageUrl = superheroes?[0].image?.url
             
             var hero2 = SuperheroTable()
+            hero2.id = superheroes?[1].id
             hero2.name = superheroes?[1].name
             hero2.intelligence = superheroes?[1].powerstats?.intelligence
             hero2.strength = superheroes?[1].powerstats?.strength
@@ -138,7 +140,7 @@ class SearchViewController: UIViewController {
             hero2.rating = 4.0
             hero2.imageUrl = superheroes?[1].image?.url
             
-            var superheroes = [hero1, hero2]
+            var superheroes = [hero1, hero2, hero1, hero1, hero2]
             
             favouritesViewController.superheroes = superheroes 
             

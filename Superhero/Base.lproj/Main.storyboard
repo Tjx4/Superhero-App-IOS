@@ -152,7 +152,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cvFavSuperheroes" destination="jKd-Uu-CHw" id="dcf-m7-hk0"/>
-                        <segue destination="vQd-jH-cRn" kind="push" identifier="viewFavHeroSegue" id="Ds8-yD-NBM"/>
+                        <segue destination="vQd-jH-cRn" kind="show" identifier="viewFavHeroSegue" id="Ds8-yD-NBM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUE-7H-wNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1,7 +1,7 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var cvFavSuperheroes: UICollectionView!
     var superheroes: [SuperheroTable]?
@@ -65,49 +65,20 @@ extension FavouritesViewController {
         let inset: CGFloat = 10
         let minimumLineSpacing: CGFloat = 10
         let minimumInteritemSpacing: CGFloat = 10
+        let collectionViewWidth = collectionView.bounds.size.width
         
         let marginsAndInsets = inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
-        let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
-        return CGSize(width: itemWidth, height: itemWidth)
-    }
-    
-}
-
-
-/*
-extension FavouritesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath.item
-        segueToScreen(segueIdentifier: "viewFavHeroSegue")
-    }
-    
-}
-
-extension FavouritesViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return superheroes?.count ?? 0
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let favouritesTableViewCell = tableView.dequeueReusableCell(withIdentifier: FavouritesTableViewCell.identifier, for: indexPath) as! FavouritesTableViewCell
+        let itemWidth = ((collectionViewWidth - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
         
-        let superhero: SuperheroTable? = superheroes?[indexPath.row]
-        favouritesTableViewCell.config(superhero: superhero)
+        let itemHeight = CGFloat(230.0)
         
         
-        let bgColorView = UIView()
-        bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")
-        favouritesTableViewCell.selectedBackgroundView = bgColorView
+        let favouritesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: FavouritesCollectionViewCell.identifier, for: indexPath) as! FavouritesCollectionViewCell
         
-        return favouritesTableViewCell
+        // favouritesCollectionViewCell.frame = CGSize(width: itemWidth, height: itemHeight)
+        
+        return CGSize(width: itemWidth, height: itemHeight)
     }
     
-
 }
-*/
