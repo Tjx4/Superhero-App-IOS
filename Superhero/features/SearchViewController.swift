@@ -140,7 +140,20 @@ class SearchViewController: UIViewController {
             hero2.rating = 4.0
             hero2.imageUrl = superheroes?[1].image?.url
             
-            var superheroes = [hero1, hero2, hero1, hero1, hero2, hero1, hero1, hero2,hero1, hero2, hero1, hero1, hero2, hero1]
+            var hero3 = SuperheroTable()
+            hero3.id = superheroes?[2].id
+            hero3.name = superheroes?[2].name
+            hero3.intelligence = superheroes?[2].powerstats?.intelligence
+            hero3.strength = superheroes?[2].powerstats?.strength
+            hero3.speed = superheroes?[2].powerstats?.speed
+            hero3.fullName = superheroes?[2].biography?.fullName
+            hero3.alterEgos = superheroes?[2].biography?.alterEgos
+            hero3.placeOfBirth = superheroes?[2].biography?.placeOfBirth
+            hero3.publisher = superheroes?[2].biography?.publisher
+            hero3.rating = 1.0
+            hero3.imageUrl = superheroes?[2].image?.url
+            
+            var superheroes = [hero3, hero2, hero1, hero3, hero2, hero1, hero1, hero2,hero1, hero2, hero1, hero1, hero3, hero1]
             
             favouritesViewController.superheroes = superheroes 
             

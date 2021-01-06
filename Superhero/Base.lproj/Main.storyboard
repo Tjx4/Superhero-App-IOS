@@ -140,8 +140,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite superhero" id="Siw-Hi-RWV">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Item" image="fav_dark" id="16Y-ib-8nz">
-                            <color key="tintColor" systemColor="labelColor"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="fav_dark" id="16Y-ib-8nz">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="close_black" id="q95-vg-5Bq">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
