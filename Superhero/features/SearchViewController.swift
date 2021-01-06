@@ -140,7 +140,7 @@ class SearchViewController: UIViewController {
             hero2.rating = 4.0
             hero2.imageUrl = superheroes?[1].image?.url
             
-            var superheroes = [hero1, hero2, hero1, hero1, hero2]
+            var superheroes = [hero1, hero2, hero1, hero1, hero2, hero1, hero1, hero2,hero1, hero2, hero1, hero1, hero2, hero1]
             
             favouritesViewController.superheroes = superheroes 
             

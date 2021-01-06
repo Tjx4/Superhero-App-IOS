@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="110" id="zmX-Mg-Iji"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-0r-aIx" customClass="AARatingBar" customModule="AARatingBar">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-0r-aIx" customClass="AARatingBar" customModule="AARatingBar">
                                 <rect key="frame" x="10" y="158" width="172" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0Yi-9T-tC8"/>
@@ -64,7 +64,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
                 <constraint firstItem="Rio-XQ-vgD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ljb-Tf-HZ8"/>
                 <constraint firstAttribute="bottom" secondItem="Rio-XQ-vgD" secondAttribute="bottom" constant="5" id="OS7-O3-qZU"/>
@@ -89,6 +89,9 @@
         <image name="placeholder" width="400" height="266.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

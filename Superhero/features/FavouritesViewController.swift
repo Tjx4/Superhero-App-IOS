@@ -63,20 +63,15 @@ extension FavouritesViewController {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellsPerRow = 2
         let inset: CGFloat = 10
-        let minimumLineSpacing: CGFloat = 10
-        let minimumInteritemSpacing: CGFloat = 10
+        let minimumLineSpacing: CGFloat = 0
+        let minimumInteritemSpacing: CGFloat = 0
         let collectionViewWidth = collectionView.bounds.size.width
         
-        let marginsAndInsets = inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
+        let marginsAndInsets = CGFloat(0) // inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
        
         let itemWidth = ((collectionViewWidth - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
         
         let itemHeight = CGFloat(230.0)
-        
-        
-        let favouritesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: FavouritesCollectionViewCell.identifier, for: indexPath) as! FavouritesCollectionViewCell
-        
-        // favouritesCollectionViewCell.frame = CGSize(width: itemWidth, height: itemHeight)
         
         return CGSize(width: itemWidth, height: itemHeight)
     }

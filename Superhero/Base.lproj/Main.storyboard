@@ -606,14 +606,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-JS-7Ih" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
-                                <rect key="frame" x="147" y="92" width="120" height="120"/>
+                                <rect key="frame" x="137" y="92" width="140" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="0BK-k1-z7x"/>
-                                    <constraint firstAttribute="width" constant="120" id="l3n-ym-rPu"/>
+                                    <constraint firstAttribute="height" constant="140" id="0BK-k1-z7x"/>
+                                    <constraint firstAttribute="width" constant="140" id="l3n-ym-rPu"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="80" y="253" width="254" height="45"/>
+                                <rect key="frame" x="80" y="262" width="254" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="KY8-68-Pee"/>
@@ -634,7 +634,7 @@
                             <constraint firstItem="o8X-M6-3Su" firstAttribute="leading" secondItem="YVD-dg-h5P" secondAttribute="leading" constant="80" id="42v-aY-WIa"/>
                             <constraint firstItem="nO0-JS-7Ih" firstAttribute="top" secondItem="YVD-dg-h5P" secondAttribute="top" constant="36" id="8pq-hh-eKG"/>
                             <constraint firstItem="YVD-dg-h5P" firstAttribute="trailing" secondItem="o8X-M6-3Su" secondAttribute="trailing" constant="80" id="GK6-My-08S"/>
-                            <constraint firstItem="o8X-M6-3Su" firstAttribute="top" secondItem="nO0-JS-7Ih" secondAttribute="bottom" constant="41" id="rAV-v9-Es6"/>
+                            <constraint firstItem="o8X-M6-3Su" firstAttribute="top" secondItem="nO0-JS-7Ih" secondAttribute="bottom" constant="30" id="rAV-v9-Es6"/>
                             <constraint firstItem="nO0-JS-7Ih" firstAttribute="centerX" secondItem="jki-v4-j3o" secondAttribute="centerX" id="wRM-YC-ODj"/>
                         </constraints>
                     </view>
