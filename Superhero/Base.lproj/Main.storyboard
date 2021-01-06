@@ -177,22 +177,22 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="752"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alP-9L-DOJ" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-lj-Jwb" userLabel="cardsContainer">
                                                 <rect key="frame" x="0.0" y="280" width="414" height="700"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtS-42-ar6" userLabel="Title Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superhero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-86-tu5">
-                                                                <rect key="frame" x="20" y="8" width="108" height="26.5"/>
+                                                                <rect key="frame" x="20" y="15" width="108" height="26.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lEr-WY-nCv">
-                                                                <rect key="frame" x="20" y="42" width="384" height="20.5"/>
+                                                                <rect key="frame" x="20" y="49" width="384" height="20.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaJ-TG-S58">
                                                                         <rect key="frame" x="0.0" y="0.0" width="79" height="20.5"/>
@@ -211,8 +211,8 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="2du-DK-dlt"/>
-                                                            <constraint firstItem="rX4-86-tu5" firstAttribute="top" secondItem="VtS-42-ar6" secondAttribute="top" constant="8" id="FGR-bJ-ZK0"/>
+                                                            <constraint firstAttribute="height" constant="85" id="2du-DK-dlt"/>
+                                                            <constraint firstItem="rX4-86-tu5" firstAttribute="top" secondItem="VtS-42-ar6" secondAttribute="top" constant="15" id="FGR-bJ-ZK0"/>
                                                             <constraint firstItem="lEr-WY-nCv" firstAttribute="leading" secondItem="rX4-86-tu5" secondAttribute="leading" id="Fas-Rk-CEj"/>
                                                             <constraint firstItem="lEr-WY-nCv" firstAttribute="top" secondItem="rX4-86-tu5" secondAttribute="bottom" constant="7.5" id="IuB-sc-4y7"/>
                                                             <constraint firstItem="rX4-86-tu5" firstAttribute="leading" secondItem="VtS-42-ar6" secondAttribute="leading" constant="20" id="fVx-pN-WeV"/>
@@ -225,7 +225,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0X-ak-21C" userLabel="Power stats Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="85" width="394" height="120"/>
+                                                        <rect key="frame" x="10" y="95" width="394" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXo-P3-9yr">
                                                                 <rect key="frame" x="10" y="10" width="374" height="20.5"/>
@@ -306,7 +306,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-he-QXq" userLabel="Biography Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="215" width="394" height="120"/>
+                                                        <rect key="frame" x="10" y="225" width="394" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u9-cU-tzN">
                                                                 <rect key="frame" x="10" y="10" width="374" height="20.5"/>
@@ -388,7 +388,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExC-2g-3VC">
-                                                        <rect key="frame" x="10" y="355" width="394" height="45"/>
+                                                        <rect key="frame" x="10" y="365" width="394" height="45"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="HpS-CW-FLS"/>
@@ -404,7 +404,7 @@
                                                         </connections>
                                                     </button>
                                                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-eW-5wn" userLabel="Appearance Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="345" width="394" height="145"/>
+                                                        <rect key="frame" x="10" y="355" width="394" height="145"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-il-jzi">
                                                                 <rect key="frame" x="10" y="10" width="374" height="20.5"/>
@@ -484,7 +484,6 @@
                                                             <constraint firstAttribute="trailing" secondItem="PU4-7X-WxZ" secondAttribute="trailing" constant="5" id="K2d-WA-pxj"/>
                                                             <constraint firstItem="nRv-VE-Oiu" firstAttribute="top" secondItem="coE-0N-iax" secondAttribute="bottom" constant="5" id="LNb-uq-RCL"/>
                                                             <constraint firstItem="a87-Rq-2GD" firstAttribute="leading" secondItem="XyH-Pn-vIR" secondAttribute="trailing" constant="10" id="OSM-IM-7Qb"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Vm2-Hf-w2X"/>
                                                             <constraint firstItem="nRv-VE-Oiu" firstAttribute="leading" secondItem="0wi-eW-5wn" secondAttribute="leading" constant="10" id="YTW-ug-hVz"/>
                                                             <constraint firstItem="XyH-Pn-vIR" firstAttribute="top" secondItem="jbD-qb-OAg" secondAttribute="bottom" constant="10" id="aV4-BW-YSc"/>
                                                             <constraint firstItem="g6d-nF-rjH" firstAttribute="top" secondItem="XyH-Pn-vIR" secondAttribute="bottom" constant="4" id="b0H-cY-KuC"/>
@@ -534,7 +533,7 @@
                                         <constraints>
                                             <constraint firstItem="VMT-lj-Jwb" firstAttribute="leading" secondItem="alP-9L-DOJ" secondAttribute="leading" id="3EW-4P-VMD"/>
                                             <constraint firstAttribute="trailing" secondItem="VMT-lj-Jwb" secondAttribute="trailing" id="ceI-g5-RXw"/>
-                                            <constraint firstAttribute="height" constant="1100" id="eQJ-re-T5o"/>
+                                            <constraint firstAttribute="height" constant="1280" id="eQJ-re-T5o"/>
                                             <constraint firstItem="VMT-lj-Jwb" firstAttribute="top" secondItem="alP-9L-DOJ" secondAttribute="top" constant="280" id="vAu-7N-Wh9"/>
                                         </constraints>
                                     </view>
