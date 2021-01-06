@@ -6,6 +6,7 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -148,26 +149,42 @@
                                     <constraint firstItem="5eg-TB-prX" firstAttribute="centerY" secondItem="oMa-j5-Hgs" secondAttribute="centerY" id="kXA-ZT-CQU"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5h4-Vu-tlv">
-                                <rect key="frame" x="0.0" y="62" width="414" height="780"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
-                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-Uu-CHw">
+                                <rect key="frame" x="0.0" y="70" width="414" height="772"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gza-Ov-KSL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FcB-r0-5F4">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hyV-gO-YHm">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lIX-Yf-nZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5h4-Vu-tlv" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="ByS-kA-Vwh"/>
+                            <constraint firstItem="jKd-Uu-CHw" firstAttribute="top" secondItem="oMa-j5-Hgs" secondAttribute="bottom" constant="8" symbolic="YES" id="4PS-yO-3xt"/>
                             <constraint firstItem="oMa-j5-Hgs" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="DM6-Iz-YrH"/>
                             <constraint firstItem="oMa-j5-Hgs" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="O7q-lR-cl0"/>
-                            <constraint firstAttribute="bottom" secondItem="5h4-Vu-tlv" secondAttribute="bottom" id="ZtA-JN-Zlg"/>
-                            <constraint firstItem="5h4-Vu-tlv" firstAttribute="top" secondItem="oMa-j5-Hgs" secondAttribute="bottom" id="cEA-kD-sic"/>
-                            <constraint firstItem="5h4-Vu-tlv" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="q1Z-6A-vQw"/>
+                            <constraint firstItem="jKd-Uu-CHw" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="gkS-gT-yHm"/>
+                            <constraint firstItem="jKd-Uu-CHw" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="p81-wB-CA4"/>
                             <constraint firstItem="oMa-j5-Hgs" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="tPW-kb-Aka"/>
+                            <constraint firstAttribute="bottom" secondItem="jKd-Uu-CHw" secondAttribute="bottom" id="uEj-3R-HKh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Siw-Hi-RWV"/>
                     <connections>
-                        <outlet property="tvFavSuperheroes" destination="5h4-Vu-tlv" id="REP-eV-Tq2"/>
+                        <outlet property="cvFavSuperheroes" destination="jKd-Uu-CHw" id="dcf-m7-hk0"/>
                         <segue destination="vQd-jH-cRn" kind="presentation" identifier="viewFavHeroSegue" modalPresentationStyle="fullScreen" id="Ds8-yD-NBM"/>
                     </connections>
                 </viewController>
@@ -611,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMK-Yf-s7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657.971014492754" y="93.75"/>
+            <point key="canvasLocation" x="2700" y="77"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="4H7-YI-FEX">
@@ -663,7 +680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMq-Kf-yoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3528" y="94"/>
+            <point key="canvasLocation" x="3535" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eGd-me-CFq">

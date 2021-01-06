@@ -1,19 +1,18 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController {
+class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet var tvFavSuperheroes: UITableView!
+    @IBOutlet var cvFavSuperheroes: UICollectionView!
     var superheroes: [SuperheroTable]?
     var selectedIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tvFavSuperheroes.register(FavouritesTableViewCell.nib(), forCellReuseIdentifier: FavouritesTableViewCell.identifier)
-        tvFavSuperheroes.delegate = self as UITableViewDelegate
-        tvFavSuperheroes.dataSource = self as UITableViewDataSource
-    
+        cvFavSuperheroes.register(FavouritesCollectionViewCell.nib(), forCellWithReuseIdentifier: FavouritesCollectionViewCell.identifier)
+        cvFavSuperheroes.delegate = self as UICollectionViewDelegate
+        cvFavSuperheroes.dataSource = self as UICollectionViewDataSource
     }
     
     @IBAction func onCloseClicked(_ sender: Any) {
@@ -34,6 +33,38 @@ class FavouritesViewController: UIViewController {
    }
 }
 
+extension FavouritesViewController {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = indexPath.item
+        segueToScreen(segueIdentifier: "viewFavHeroSegue")
+    }
+}
+
+extension FavouritesViewController {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return superheroes?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let favouritesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: FavouritesCollectionViewCell.identifier, for: indexPath) as! FavouritesCollectionViewCell
+        
+        let superhero: SuperheroTable? = superheroes?[indexPath.row]
+        favouritesCollectionViewCell.config(superhero: superhero)
+        
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")
+        favouritesCollectionViewCell.selectedBackgroundView = bgColorView
+        
+        return favouritesCollectionViewCell
+    }
+    
+}
+
+
+/*
 extension FavouritesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.item
@@ -69,3 +100,4 @@ extension FavouritesViewController: UITableViewDataSource {
     
 
 }
+*/
