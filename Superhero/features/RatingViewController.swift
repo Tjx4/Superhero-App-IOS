@@ -23,6 +23,8 @@ class RatingViewController: UIViewController {
         let url = superhero?.image?.url ?? ""
         imgvHeroImage.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))
         
+        rbRating.value = CGFloat(superhero?.rating ?? 0.0)
+        
     }
 
 
