@@ -15,6 +15,10 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
         cvFavSuperheroes.register(FavouritesCollectionViewCell.nib(), forCellWithReuseIdentifier: FavouritesCollectionViewCell.identifier)
         cvFavSuperheroes.delegate = self as UICollectionViewDelegate
         cvFavSuperheroes.dataSource = self as UICollectionViewDataSource
+        
+        if (superheroes?.isEmpty ?? true)  {
+            lblNoFavourites.isHidden = false
+        }
     }
     
     @IBAction func onCloseButtonClicked(_ sender: Any) {
@@ -56,9 +60,6 @@ extension FavouritesViewController {
         let bgColorView = UIView()
         bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")
         favouritesCollectionViewCell.selectedBackgroundView = bgColorView
-        
-        var dfdf = SuperheroTable()
-        
         
         return favouritesCollectionViewCell
     }

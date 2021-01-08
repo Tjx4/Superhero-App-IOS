@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     var superheroes: [Superhero]?
     var selectedIndex: Int!
     var searchTimer: Timer?
+    let dbHelper = DbHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class SearchViewController: UIViewController {
         self.txtSearch.delegate = self
         // handle the editingChanged event by calling (textFieldDidEditingChanged(-:))
             self.txtSearch.addTarget(self, action: #selector(textFieldDidEditingChanged(_:)), for: .editingChanged)
+        
+        dbHelper.connect()
     }
     
     @objc func textFieldDidEditingChanged(_ textField: UITextField) {
@@ -96,9 +99,19 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func onLogoClicked(_ sender: Any) {
+        
     }
     
     func viewSuperhero(superhero: Superhero){
+        
+    }
+    
+    func addHeroToFavourites(superhero: Superhero?) {
+        if superhero == nil {
+            return
+        }
+        
+        dbHelper.superheroTable.insert(superhero: superhero!.toFavSuperhero())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -113,8 +126,7 @@ class SearchViewController: UIViewController {
             
             let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
             
-            let superheroTable = SuperheroTable()
-            favouritesViewController.superheroes = superheroTable.getAll()
+            favouritesViewController.superheroes = dbHelper.superheroTable.getAll()
             
         default:
             var fdf = 0 // Todo Remove
@@ -148,7 +160,7 @@ extension SearchViewController: UITableViewDataSource {
         
         let superhero: Superhero? = superheroes?[indexPath.row]
         superheroTableViewCell.config(superhero: superhero)
-        
+        superheroTableViewCell.onFaveClicked = self.addHeroToFavourites
         
         let bgColorView = UIView()
         bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")

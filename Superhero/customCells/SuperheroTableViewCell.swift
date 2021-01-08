@@ -6,6 +6,8 @@ class SuperheroTableViewCell: UITableViewCell {
     @IBOutlet weak var lblSuperheroName: UILabel!
     @IBOutlet weak var imgFav: UIImageView!
     @IBOutlet weak var imgSetFav: UIImageView!
+    var onFaveClicked: ((Superhero?) -> ())!
+    var superhero: Superhero!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,21 +22,22 @@ class SuperheroTableViewCell: UITableViewCell {
     }
     
     public func config(superhero: Superhero?){
+        self.superhero = superhero
         
         lblSuperheroName.text = superhero?.name
         
         imgSuperhero.sd_setImage(with: URL(string: superhero?.image?.url ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
         
         
-        //imgSetFav.isHidden = ((superhero?.isFav) != nil)
-        //imgFav.isHidden = superhero?.isFav
+        imgSetFav.isHidden = superhero!.isFav
+        imgFav.isHidden = !superhero!.isFav 
         
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imgSetFav.isUserInteractionEnabled = true
         imgSetFav.addGestureRecognizer(tapGestureRecognizer)
     }
-   
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
@@ -42,7 +45,7 @@ class SuperheroTableViewCell: UITableViewCell {
         tappedImage.isHidden = true
         imgFav.isHidden = false
         
-        // Add hero to fav
+       onFaveClicked(superhero)
     }
     
 }

@@ -1,7 +1,9 @@
 import Foundation
 import SQLite
 
-class SuperheroTable : DbHelper {
+class SuperheroTable {
+    var db: Connection? = nil
+    
     let favouriteHeros = Table("favouriteHeros")
     
     let id = Expression<Int64>("id")
@@ -16,13 +18,10 @@ class SuperheroTable : DbHelper {
     let rating = Expression<Double>("rating")
     let imageUrl = Expression<String>("imageUrl")
     
-    override init() {
-        super.init()
-        
-        connect()
+    init(db: Connection?) {
+        self.db = db
         createTable()
     }
-    
     
     func createTable(){
         do {

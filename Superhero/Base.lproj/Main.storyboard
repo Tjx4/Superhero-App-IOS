@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="1777" y="94"/>
         </scene>
-        <!--Favourite superhero-->
+        <!--Favourite superheroes-->
         <scene sceneID="d3k-wb-gbr">
             <objects>
                 <viewController id="VvI-4H-hDY" customClass="FavouritesViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,7 +128,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-su-gGD">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no favourite superheroes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-su-gGD">
                                 <rect key="frame" x="20" y="76" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -146,13 +146,8 @@
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="r0X-rt-hc6"/>
                             <constraint firstAttribute="bottom" secondItem="jKd-Uu-CHw" secondAttribute="bottom" id="uEj-3R-HKh"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="wJV-su-gGD"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Favourite superhero" id="Siw-Hi-RWV">
+                    <navigationItem key="navigationItem" title="Favourite superheroes" id="Siw-Hi-RWV">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="fav_dark" id="16Y-ib-8nz">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>

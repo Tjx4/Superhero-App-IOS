@@ -4,12 +4,19 @@ import SQLite
 class DbHelper {
     var db: Connection? = nil
     
+    var superheroTable: SuperheroTable!
+    
     func connect(){
         do{
-            db = try Connection("path/to/db.sqlite3")
+            let path = NSSearchPathForDirectoriesInDomains(
+                .documentDirectory, .userDomainMask, true
+            ).first!
+            
+            db = try Connection("\(path)/db.sqlite3")
+            
+            superheroTable = SuperheroTable(db: db)
         } catch let error {
             print("Connect Error: \(error)")
         }
     }
 }
-
