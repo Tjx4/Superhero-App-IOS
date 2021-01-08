@@ -6,7 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,25 +118,39 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gc8-uG-1EW">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gc8-uG-1EW" customClass="FavouritesCollectionViewCell" customModule="Superhero" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OaI-pg-QFN">
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
+                                        </view>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJV-su-gGD">
+                                <rect key="frame" x="20" y="76" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lIX-Yf-nZv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="wJV-su-gGD" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" constant="20" id="2HC-xt-aNn"/>
+                            <constraint firstItem="wJV-su-gGD" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" constant="20" id="L3G-Be-JQY"/>
+                            <constraint firstItem="lIX-Yf-nZv" firstAttribute="trailing" secondItem="wJV-su-gGD" secondAttribute="trailing" constant="20" id="bNb-3c-izu"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="leading" secondItem="lIX-Yf-nZv" secondAttribute="leading" id="gkS-gT-yHm"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="trailing" secondItem="lIX-Yf-nZv" secondAttribute="trailing" id="p81-wB-CA4"/>
                             <constraint firstItem="jKd-Uu-CHw" firstAttribute="top" secondItem="lIX-Yf-nZv" secondAttribute="top" id="r0X-rt-hc6"/>
                             <constraint firstAttribute="bottom" secondItem="jKd-Uu-CHw" secondAttribute="bottom" id="uEj-3R-HKh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wJV-su-gGD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite superhero" id="Siw-Hi-RWV">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="fav_dark" id="16Y-ib-8nz">
@@ -152,6 +165,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cvFavSuperheroes" destination="jKd-Uu-CHw" id="dcf-m7-hk0"/>
+                        <outlet property="lblNoFavourites" destination="wJV-su-gGD" id="8wV-R0-pzs"/>
                         <segue destination="vQd-jH-cRn" kind="show" identifier="viewFavHeroSegue" id="Ds8-yD-NBM"/>
                     </connections>
                 </viewController>
@@ -177,22 +191,22 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="752"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alP-9L-DOJ" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-lj-Jwb" userLabel="cardsContainer">
                                                 <rect key="frame" x="0.0" y="280" width="414" height="700"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtS-42-ar6" userLabel="Title Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superhero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX4-86-tu5">
-                                                                <rect key="frame" x="20" y="8" width="108" height="26.5"/>
+                                                                <rect key="frame" x="20" y="15" width="108" height="26.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lEr-WY-nCv">
-                                                                <rect key="frame" x="20" y="42" width="384" height="20.5"/>
+                                                                <rect key="frame" x="20" y="49" width="384" height="20.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaJ-TG-S58">
                                                                         <rect key="frame" x="0.0" y="0.0" width="79" height="20.5"/>
@@ -211,8 +225,8 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="75" id="2du-DK-dlt"/>
-                                                            <constraint firstItem="rX4-86-tu5" firstAttribute="top" secondItem="VtS-42-ar6" secondAttribute="top" constant="8" id="FGR-bJ-ZK0"/>
+                                                            <constraint firstAttribute="height" constant="85" id="2du-DK-dlt"/>
+                                                            <constraint firstItem="rX4-86-tu5" firstAttribute="top" secondItem="VtS-42-ar6" secondAttribute="top" constant="15" id="FGR-bJ-ZK0"/>
                                                             <constraint firstItem="lEr-WY-nCv" firstAttribute="leading" secondItem="rX4-86-tu5" secondAttribute="leading" id="Fas-Rk-CEj"/>
                                                             <constraint firstItem="lEr-WY-nCv" firstAttribute="top" secondItem="rX4-86-tu5" secondAttribute="bottom" constant="7.5" id="IuB-sc-4y7"/>
                                                             <constraint firstItem="rX4-86-tu5" firstAttribute="leading" secondItem="VtS-42-ar6" secondAttribute="leading" constant="20" id="fVx-pN-WeV"/>
@@ -225,11 +239,11 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0X-ak-21C" userLabel="Power stats Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="85" width="394" height="120"/>
+                                                        <rect key="frame" x="10" y="95" width="394" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXo-P3-9yr">
                                                                 <rect key="frame" x="10" y="10" width="374" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -306,11 +320,11 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-he-QXq" userLabel="Biography Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="215" width="394" height="120"/>
+                                                        <rect key="frame" x="10" y="225" width="394" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u9-cU-tzN">
                                                                 <rect key="frame" x="10" y="10" width="374" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -388,7 +402,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExC-2g-3VC">
-                                                        <rect key="frame" x="10" y="355" width="394" height="45"/>
+                                                        <rect key="frame" x="10" y="365" width="394" height="45"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="HpS-CW-FLS"/>
@@ -404,11 +418,11 @@
                                                         </connections>
                                                     </button>
                                                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-eW-5wn" userLabel="Appearance Card" customClass="CardView" customModule="Superhero" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="345" width="394" height="145"/>
+                                                        <rect key="frame" x="10" y="355" width="394" height="145"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appearance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bk-il-jzi">
                                                                 <rect key="frame" x="10" y="10" width="374" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -484,7 +498,6 @@
                                                             <constraint firstAttribute="trailing" secondItem="PU4-7X-WxZ" secondAttribute="trailing" constant="5" id="K2d-WA-pxj"/>
                                                             <constraint firstItem="nRv-VE-Oiu" firstAttribute="top" secondItem="coE-0N-iax" secondAttribute="bottom" constant="5" id="LNb-uq-RCL"/>
                                                             <constraint firstItem="a87-Rq-2GD" firstAttribute="leading" secondItem="XyH-Pn-vIR" secondAttribute="trailing" constant="10" id="OSM-IM-7Qb"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Vm2-Hf-w2X"/>
                                                             <constraint firstItem="nRv-VE-Oiu" firstAttribute="leading" secondItem="0wi-eW-5wn" secondAttribute="leading" constant="10" id="YTW-ug-hVz"/>
                                                             <constraint firstItem="XyH-Pn-vIR" firstAttribute="top" secondItem="jbD-qb-OAg" secondAttribute="bottom" constant="10" id="aV4-BW-YSc"/>
                                                             <constraint firstItem="g6d-nF-rjH" firstAttribute="top" secondItem="XyH-Pn-vIR" secondAttribute="bottom" constant="4" id="b0H-cY-KuC"/>
@@ -534,7 +547,7 @@
                                         <constraints>
                                             <constraint firstItem="VMT-lj-Jwb" firstAttribute="leading" secondItem="alP-9L-DOJ" secondAttribute="leading" id="3EW-4P-VMD"/>
                                             <constraint firstAttribute="trailing" secondItem="VMT-lj-Jwb" secondAttribute="trailing" id="ceI-g5-RXw"/>
-                                            <constraint firstAttribute="height" constant="1100" id="eQJ-re-T5o"/>
+                                            <constraint firstAttribute="height" constant="1280" id="eQJ-re-T5o"/>
                                             <constraint firstItem="VMT-lj-Jwb" firstAttribute="top" secondItem="alP-9L-DOJ" secondAttribute="top" constant="280" id="vAu-7N-Wh9"/>
                                         </constraints>
                                     </view>
@@ -613,17 +626,17 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="80" y="262" width="254" height="45"/>
+                                <rect key="frame" x="80" y="262" width="254" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="KY8-68-Pee"/>
+                                    <constraint firstAttribute="height" constant="50" id="KY8-68-Pee"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.099279068904619294" green="0.56104274611398963" blue="0.47857278985159241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.011764705882352941" green="0.85098039215686272" blue="0.77254901960784317" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

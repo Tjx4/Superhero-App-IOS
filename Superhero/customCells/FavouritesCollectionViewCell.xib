@@ -34,29 +34,31 @@
                                 </constraints>
                             </imageView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-0r-aIx" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="10" y="148" width="172" height="30"/>
+                                <rect key="frame" x="51" y="148" width="90" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0Yi-9T-tC8"/>
+                                    <constraint firstAttribute="height" constant="20" id="0Yi-9T-tC8"/>
+                                    <constraint firstAttribute="width" constant="90" id="yXR-r5-5W7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.094941877258028592" green="0.53653254533678751" blue="0.45766544322423747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.011764705882352941" green="0.85098039215686272" blue="0.77254901960784317" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mhb-0r-aIx" firstAttribute="leading" secondItem="Rio-XQ-vgD" secondAttribute="leading" constant="10" id="GyG-WE-zyv"/>
+                            <constraint firstItem="rPw-Tf-tkw" firstAttribute="leading" secondItem="Rio-XQ-vgD" secondAttribute="leading" constant="46" id="8AU-4W-PZ0"/>
+                            <constraint firstAttribute="trailing" secondItem="rPw-Tf-tkw" secondAttribute="trailing" constant="46" id="FEw-bs-iaL"/>
                             <constraint firstItem="qra-S6-P7l" firstAttribute="leading" secondItem="Rio-XQ-vgD" secondAttribute="leading" constant="10" id="QBc-0c-4g1"/>
+                            <constraint firstAttribute="bottom" secondItem="mhb-0r-aIx" secondAttribute="bottom" constant="37" id="bZX-k7-ZMI"/>
                             <constraint firstItem="mhb-0r-aIx" firstAttribute="top" secondItem="qra-S6-P7l" secondAttribute="bottom" constant="8" symbolic="YES" id="brc-LX-KGO"/>
-                            <constraint firstItem="rPw-Tf-tkw" firstAttribute="centerX" secondItem="Rio-XQ-vgD" secondAttribute="centerX" id="d6U-yb-OS8"/>
-                            <constraint firstAttribute="trailing" secondItem="mhb-0r-aIx" secondAttribute="trailing" constant="10" id="euk-wY-PSy"/>
                             <constraint firstItem="rPw-Tf-tkw" firstAttribute="top" secondItem="Rio-XQ-vgD" secondAttribute="top" constant="9" id="gQr-xY-K6j"/>
                             <constraint firstItem="mhb-0r-aIx" firstAttribute="centerX" secondItem="Rio-XQ-vgD" secondAttribute="centerX" id="k6B-LP-Fv0"/>
+                            <constraint firstItem="rPw-Tf-tkw" firstAttribute="centerX" secondItem="Rio-XQ-vgD" secondAttribute="centerX" id="omj-Ao-RAc"/>
                             <constraint firstItem="qra-S6-P7l" firstAttribute="top" secondItem="rPw-Tf-tkw" secondAttribute="bottom" constant="10" id="sRY-hS-bHj"/>
                             <constraint firstAttribute="trailing" secondItem="qra-S6-P7l" secondAttribute="trailing" constant="10" id="xSM-hX-RVF"/>
                         </constraints>
