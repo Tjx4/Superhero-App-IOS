@@ -8,11 +8,15 @@ PODS:
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
 
 DEPENDENCIES:
   - AARatingBar
   - Moya (~> 14.0)
   - SDWebImage (~> 5.0)
+  - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
   trunk:
@@ -20,13 +24,15 @@ SPEC REPOS:
     - Alamofire
     - Moya
     - SDWebImage
+    - SQLite.swift
 
 SPEC CHECKSUMS:
   AARatingBar: dc54d24687ae97688ffdb29738332d0bc5c0c09f
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 248df4f70a777c295b478b8c0e81aa30a7a48aeb
+PODFILE CHECKSUM: e7974e74ab2ce1aff39dec4d1aef2df7793315bc
 
 COCOAPODS: 1.10.0
