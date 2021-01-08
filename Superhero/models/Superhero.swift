@@ -7,6 +7,17 @@ struct Superhero: Codable {
     var work: Work? = nil
     var connections: Connections? = nil
     var image: Image? = nil
-    //var rating: Float = 0
-    //var isFav: Bool = false
+    var rating: Float = 0
+    var isFav: Bool = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case powerstats = "powerstats"
+        case biography = "biography"
+        case appearance = "appearance"
+        case work = "work"
+        case connections = "connections"
+        case image = "image"
+   }
 }

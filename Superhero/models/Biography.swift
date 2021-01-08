@@ -6,4 +6,12 @@ struct Biography: Codable {
     var firstAppearance: String? = nil
     var publisher: String? = nil
     var alignment: String? = nil
+    
+    enum CodingKeys: String, CodingKey {
+        case fullName = "full-name"
+        case alterEgos = "alter-egos"
+        case placeOfBirth = "place-of-birth"
+        case publisher = "publisher"
+        case alignment = "alignment"
+   }
 }

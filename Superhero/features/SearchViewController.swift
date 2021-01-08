@@ -90,30 +90,9 @@ class SearchViewController: UIViewController {
         self.lblNoresults.isHidden = false
         self.lblNoresults.text = "No heroes found that match - \(keywords)"
     }
-    
-    
-/*
-     
-     let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
-     print("json = \(json)")
-     
-        var superhero = Superhero()
-        var image = Image()
-        image.url = "http://appicsoftware.co.za/api/Platinum_access_backend/1/profpic.jpeg"
-        superhero.image = image
-        superhero.name = "My man"
-        
-        var superhero2 = Superhero()
-        var image2 = Image()
-        image2.url = "http://appicsoftware.co.za/api/Platinum_access_backend/2/profpic.jpeg"
-        superhero2.image = image2
-        superhero2.name = "My lady"
-        
-        superheroes = [superhero, superhero2]
-    
-*/
+
     @IBAction func onViewFavouritesClicked(_ sender: Any) {
-        segueToScreen(segueIdentifier: "viewFavouritesSegue")
+        segueToScreen(segueIdentifier: "viewFavouriteSuperheroesSegue")
     }
     
     @IBAction func onLogoClicked(_ sender: Any) {
@@ -123,12 +102,66 @@ class SearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-          if segue.identifier == "viewHeroSegue" {
-              let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
+        
+        switch segue.identifier {
+        case "viewHeroSegue" :
+            let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
+            viewSuperheroViewController.superhero = superheroes?[selectedIndex]
             
-              viewSuperheroViewController.superhero = superheroes?[selectedIndex]
-          }
-      }
+        case "viewFavouriteSuperheroesSegue" :
+            let uINavigationController = segue.destination as! UINavigationController
+            
+            let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
+            
+            //Todo remove
+            var hero1 = SuperheroTable()
+            hero1.id = superheroes?[0].id
+            hero1.name = superheroes?[0].name
+            hero1.intelligence = superheroes?[0].powerstats?.intelligence
+            hero1.strength = superheroes?[0].powerstats?.strength
+            hero1.speed = superheroes?[0].powerstats?.speed
+            hero1.fullName = superheroes?[0].biography?.fullName
+            hero1.alterEgos = superheroes?[0].biography?.alterEgos
+            hero1.placeOfBirth = superheroes?[0].biography?.placeOfBirth
+            hero1.publisher = superheroes?[0].biography?.publisher
+            hero1.rating = 3.0
+            hero1.imageUrl = superheroes?[0].image?.url
+            
+            var hero2 = SuperheroTable()
+            hero2.id = superheroes?[1].id
+            hero2.name = superheroes?[1].name
+            hero2.intelligence = superheroes?[1].powerstats?.intelligence
+            hero2.strength = superheroes?[1].powerstats?.strength
+            hero2.speed = superheroes?[1].powerstats?.speed
+            hero2.fullName = superheroes?[1].biography?.fullName
+            hero2.alterEgos = superheroes?[1].biography?.alterEgos
+            hero2.placeOfBirth = superheroes?[1].biography?.placeOfBirth
+            hero2.publisher = superheroes?[1].biography?.publisher
+            hero2.rating = 4.0
+            hero2.imageUrl = superheroes?[1].image?.url
+            
+            var hero3 = SuperheroTable()
+            hero3.id = superheroes?[2].id
+            hero3.name = superheroes?[2].name
+            hero3.intelligence = superheroes?[2].powerstats?.intelligence
+            hero3.strength = superheroes?[2].powerstats?.strength
+            hero3.speed = superheroes?[2].powerstats?.speed
+            hero3.fullName = superheroes?[2].biography?.fullName
+            hero3.alterEgos = superheroes?[2].biography?.alterEgos
+            hero3.placeOfBirth = superheroes?[2].biography?.placeOfBirth
+            hero3.publisher = superheroes?[2].biography?.publisher
+            hero3.rating = 1.0
+            hero3.imageUrl = superheroes?[2].image?.url
+            
+            var superheroes = [hero3, hero2, hero1, hero3, hero2, hero1, hero1, hero2,hero1, hero2, hero1, hero1, hero3, hero1]
+            
+            favouritesViewController.superheroes = superheroes 
+            
+        default:
+            var fdf = 0 // Todo Remove
+        }
+        
+   }
 }
 
 extension SearchViewController: UITableViewDelegate {
