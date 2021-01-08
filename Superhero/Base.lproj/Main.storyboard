@@ -630,6 +630,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KY8-68-Pee"/>
+                                    <constraint firstAttribute="width" constant="254" id="OkC-Xo-YmM"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
@@ -644,9 +645,8 @@
                         <viewLayoutGuide key="safeArea" id="YVD-dg-h5P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o8X-M6-3Su" firstAttribute="leading" secondItem="YVD-dg-h5P" secondAttribute="leading" constant="80" id="42v-aY-WIa"/>
                             <constraint firstItem="nO0-JS-7Ih" firstAttribute="top" secondItem="YVD-dg-h5P" secondAttribute="top" constant="36" id="8pq-hh-eKG"/>
-                            <constraint firstItem="YVD-dg-h5P" firstAttribute="trailing" secondItem="o8X-M6-3Su" secondAttribute="trailing" constant="80" id="GK6-My-08S"/>
+                            <constraint firstItem="o8X-M6-3Su" firstAttribute="centerX" secondItem="jki-v4-j3o" secondAttribute="centerX" id="LHf-0l-6De"/>
                             <constraint firstItem="o8X-M6-3Su" firstAttribute="top" secondItem="nO0-JS-7Ih" secondAttribute="bottom" constant="30" id="rAV-v9-Es6"/>
                             <constraint firstItem="nO0-JS-7Ih" firstAttribute="centerX" secondItem="jki-v4-j3o" secondAttribute="centerX" id="wRM-YC-ODj"/>
                         </constraints>
