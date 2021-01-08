@@ -114,6 +114,32 @@ class SuperheroTable {
         return favSuperHeroes
     }
     
+    func getFavHero() -> FavSuperhero? {
+        var favSuperHeroe: FavSuperhero?
+        do {
+            //Todo fix
+            for superheroTable in try db!.prepare(favouriteHeros) {
+                var superhero = FavSuperhero()
+                superhero.name = superheroTable[name]
+                superhero.intelligence = superheroTable[intelligence]
+                superhero.strength = superheroTable[strength]
+                superhero.speed = superheroTable[speed]
+                superhero.fullName = superheroTable[fullName]
+                superhero.alterEgos = superheroTable[alterEgos]
+                superhero.placeOfBirth = superheroTable[placeOfBirth]
+                superhero.publisher = superheroTable[publisher]
+                superhero.rating = Float(superheroTable[rating])
+                superhero.imageUrl = superheroTable[imageUrl]
+                
+            }
+            
+        } catch let error {
+            print("getFavHero Error: \(error)")
+        }
+        
+        return favSuperHeroe
+    }
+    
     func delete(rowId: Int64){
         do {
             let superhero = favouriteHeros.filter(id == rowId)
