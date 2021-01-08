@@ -5,7 +5,7 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
 
     @IBOutlet var lblNoFavourites: UILabel!
     @IBOutlet var cvFavSuperheroes: UICollectionView!
-    var superheroes: [SuperheroTable]?
+    var superheroes: [FavSuperhero]?
     var selectedIndex: Int!
     
     override func viewDidLoad() {
@@ -50,12 +50,15 @@ extension FavouritesViewController {
         
         let favouritesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: FavouritesCollectionViewCell.identifier, for: indexPath) as! FavouritesCollectionViewCell
         
-        let superhero: SuperheroTable? = superheroes?[indexPath.row]
+        let superhero: FavSuperhero? = superheroes?[indexPath.row]
         favouritesCollectionViewCell.config(superhero: superhero)
         
         let bgColorView = UIView()
         bgColorView.backgroundColor = hexStringToUIColor(hex:"#e1e1e5")
         favouritesCollectionViewCell.selectedBackgroundView = bgColorView
+        
+        var dfdf = SuperheroTable()
+        
         
         return favouritesCollectionViewCell
     }

@@ -18,7 +18,7 @@ class FavouritesCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "FavouritesCollectionViewCell", bundle: nil)
     }
     
-    public func config(superhero: SuperheroTable?){
+    public func config(superhero: FavSuperhero?){
         
         lblName.text = superhero?.name
         

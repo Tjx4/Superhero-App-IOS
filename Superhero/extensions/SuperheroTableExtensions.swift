@@ -1,6 +1,6 @@
 import Foundation
 
-extension SuperheroTable {
+extension FavSuperhero {
     
     func toSuperhero() -> Superhero{
         var superhero = Superhero()

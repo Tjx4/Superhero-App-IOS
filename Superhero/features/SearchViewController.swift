@@ -114,7 +114,7 @@ class SearchViewController: UIViewController {
             let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
             
             //Todo remove
-            var hero1 = SuperheroTable()
+            var hero1 = FavSuperhero()
             hero1.id = superheroes?[0].id
             hero1.name = superheroes?[0].name
             hero1.intelligence = superheroes?[0].powerstats?.intelligence
@@ -127,7 +127,7 @@ class SearchViewController: UIViewController {
             hero1.rating = 3.0
             hero1.imageUrl = superheroes?[0].image?.url
             
-            var hero2 = SuperheroTable()
+            var hero2 = FavSuperhero()
             hero2.id = superheroes?[1].id
             hero2.name = superheroes?[1].name
             hero2.intelligence = superheroes?[1].powerstats?.intelligence
@@ -140,7 +140,7 @@ class SearchViewController: UIViewController {
             hero2.rating = 4.0
             hero2.imageUrl = superheroes?[1].image?.url
             
-            var hero3 = SuperheroTable()
+            var hero3 = FavSuperhero()
             hero3.id = superheroes?[2].id
             hero3.name = superheroes?[2].name
             hero3.intelligence = superheroes?[2].powerstats?.intelligence
