@@ -15,7 +15,15 @@ class SuperheroTable : DbHelper {
     let publisher = Expression<String?>("publisher")
     let rating = Expression<Double>("rating")
     let imageUrl = Expression<String>("imageUrl")
+    
+    override init() {
+        super.init()
         
+        connect()
+        createTable()
+    }
+    
+    
     func createTable(){
         do {
             try db?.run(favouriteHeros.create { t in
@@ -52,7 +60,7 @@ class SuperheroTable : DbHelper {
                 rating <- Double(superhero.rating),
                 imageUrl <- superhero.imageUrl ?? "")
             try db?.run(insert)
-            // INSERT INTO "users" ("name", "email") VALUES ('Alice', 'alice@mac.com')
+            
         } catch let error {
             print("Insert Error: \(error)")
         }
@@ -74,6 +82,7 @@ class SuperheroTable : DbHelper {
                 publisher <- superhero.publisher,
                 rating <- Double(superhero.rating) ,
                 imageUrl <- superhero.imageUrl ?? ""))
+            
         } catch let error {
             print("Update Error: \(error)")
         }
@@ -82,6 +91,7 @@ class SuperheroTable : DbHelper {
     func getAll() -> [FavSuperhero] {
         var favSuperHeroes = [FavSuperhero]()
         do {
+            //Todo fix
             for superheroTable in try db!.prepare(favouriteHeros) {
                 var superhero = FavSuperhero()
                 superhero.name = superheroTable[name]
