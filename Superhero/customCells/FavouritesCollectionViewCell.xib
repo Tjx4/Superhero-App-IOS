@@ -44,7 +44,7 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="0.094941877258028592" green="0.53653254533678751" blue="0.45766544322423747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.011764705882352941" green="0.85098039215686272" blue="0.77254901960784317" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
