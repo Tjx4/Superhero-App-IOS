@@ -12,22 +12,28 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dbHelper.connect()
-        superheroes = dbHelper.superheroTable.getAll()
-        
         cvFavSuperheroes?.contentInsetAdjustmentBehavior = .always
         cvFavSuperheroes.register(FavouritesCollectionViewCell.nib(), forCellWithReuseIdentifier: FavouritesCollectionViewCell.identifier)
         cvFavSuperheroes.delegate = self as UICollectionViewDelegate
         cvFavSuperheroes.dataSource = self as UICollectionViewDataSource
         
-        if (superheroes?.isEmpty ?? true)  {
-            lblNoFavourites.isHidden = false
-        }
+        dbHelper.connect()
+        superheroes = dbHelper.superheroTable.getAll()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        if (superheroes?.isEmpty ?? true)  {
+            lblNoFavourites.isHidden = false
+        }
+        
+        if superheroes?.isEmpty ?? false || superheroes == nil{
+            return
+        }
+        
         superheroes = dbHelper.superheroTable.getAll()
         cvFavSuperheroes.reloadData()
+        
     }
     
     @IBAction func onCloseButtonClicked(_ sender: Any) {

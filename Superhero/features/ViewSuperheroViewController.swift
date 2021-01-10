@@ -63,7 +63,7 @@ class ViewSuperheroViewController: UIViewController {
     
     
     @IBAction func onSetFavouriteClicked(_ sender: UIBarButtonItem) {
-    
+        dbHelper.superheroTable.insert(superhero: superhero!.toFavSuperhero())
         self.navigationItem.rightBarButtonItem = biRate
     }
     

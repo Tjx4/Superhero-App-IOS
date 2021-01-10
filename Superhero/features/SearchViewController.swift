@@ -29,6 +29,15 @@ class SearchViewController: UIViewController {
         dbHelper.connect()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if superheroes?.isEmpty ?? false ||  superheroes == nil{
+            return
+        }
+        
+        superheroTableView.reloadData()
+    }
+    
+    
     @objc func textFieldDidEditingChanged(_ textField: UITextField) {
 
         if searchTimer != nil {
