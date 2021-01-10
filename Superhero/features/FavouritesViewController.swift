@@ -7,10 +7,14 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet var cvFavSuperheroes: UICollectionView!
     var superheroes: [FavSuperhero]?
     var selectedIndex: Int!
+    let dbHelper = DbHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        dbHelper.connect()
+        superheroes = dbHelper.superheroTable.getAll()
+        
         cvFavSuperheroes?.contentInsetAdjustmentBehavior = .always
         cvFavSuperheroes.register(FavouritesCollectionViewCell.nib(), forCellWithReuseIdentifier: FavouritesCollectionViewCell.identifier)
         cvFavSuperheroes.delegate = self as UICollectionViewDelegate
@@ -19,6 +23,11 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
         if (superheroes?.isEmpty ?? true)  {
             lblNoFavourites.isHidden = false
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        superheroes = dbHelper.superheroTable.getAll()
+        cvFavSuperheroes.reloadData()
     }
     
     @IBAction func onCloseButtonClicked(_ sender: Any) {

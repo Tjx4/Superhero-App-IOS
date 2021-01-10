@@ -28,14 +28,28 @@ class SuperheroTableViewCell: UITableViewCell {
         
         imgSuperhero.sd_setImage(with: URL(string: superhero?.image?.url ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
         
+        let isFavourite = superhero!.isFav
         
-        imgSetFav.isHidden = superhero!.isFav
-        imgFav.isHidden = !superhero!.isFav 
-        
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        imgSetFav.isUserInteractionEnabled = true
-        imgSetFav.addGestureRecognizer(tapGestureRecognizer)
+        if(isFavourite) {
+            showIsFavStar()
+        }
+        else {
+            showDefStar()
+            
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            imgSetFav.isUserInteractionEnabled = true
+            imgSetFav.addGestureRecognizer(tapGestureRecognizer)
+        }
+    }
+    
+    func showIsFavStar(){
+        imgSetFav.isHidden = true
+        imgFav.isHidden = false
+    }
+    
+    func showDefStar(){
+        imgSetFav.isHidden = false
+        imgFav.isHidden = true
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

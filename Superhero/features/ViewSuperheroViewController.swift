@@ -4,7 +4,7 @@ import Moya
 
 class ViewSuperheroViewController: UIViewController {
 
-   var biRate: UIBarButtonItem!
+    var biRate: UIBarButtonItem!
     @IBOutlet var biFavourite: UIBarButtonItem!
     @IBOutlet weak var alAppearance: UIActivityIndicatorView!
     @IBOutlet weak var txtSuperhero: UILabel!
@@ -27,14 +27,23 @@ class ViewSuperheroViewController: UIViewController {
     @IBOutlet weak var imgvHeroImage: UIImageView!
     var superhero: Superhero?
     let superheroProvider = MoyaProvider<SuperheroService>()
+    let dbHelper = DbHelper()
     
     override func viewDidLoad() {
         
         biRate = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector( onRateHeroClicked(sender:)) )
         biRate.tintColor = UIColor.black
         biRate.image = UIImage(named: "rate_black.png")
+        
+        dbHelper.connect()
+        
+        let isFav = dbHelper.superheroTable.isExist(heroId: Int64(superhero!.id ?? "0") ?? 0)
            
-        self.navigationItem.rightBarButtonItem = biFavourite
+        if isFav {
+            self.navigationItem.rightBarButtonItem = biRate
+        } else {
+            self.navigationItem.rightBarButtonItem =  biFavourite
+        }
         
         let url = superhero?.image?.url ?? ""
         imgvHeroImage.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "placeholder.png"))

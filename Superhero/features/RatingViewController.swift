@@ -27,12 +27,12 @@ class RatingViewController: UIViewController {
         rbRating.value = CGFloat(superhero!.rating)
         
         dbHelper.connect()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        superhero?.rating = Float(rbRating.value)
-        dbHelper.superheroTable.update(superhero: superhero?.toFavSuperhero() ?? FavSuperhero()) //Todo Fix
-    }
+        
+        rbRating.ratingDidChange = { [self] ratingValue in
+            self.superhero?.rating = Float(ratingValue)
+            self.dbHelper.superheroTable.update(superhero: superhero?.toFavSuperhero() ?? FavSuperhero())
+        }
 
+    }
 
 }

@@ -48,6 +48,7 @@ class SuperheroTable {
     func insert(superhero: FavSuperhero){
         do {
             let insert = favouriteHeros.insert(
+                id <- Int64(superhero.id ?? "0") ?? 0, // Todo fix
                 name <- superhero.name,
                 intelligence <- superhero.intelligence,
                 strength <- superhero.strength,
@@ -58,6 +59,7 @@ class SuperheroTable {
                 publisher <- superhero.publisher,
                 rating <- Double(superhero.rating),
                 imageUrl <- superhero.imageUrl ?? "")
+            
             try db?.run(insert)
             
         } catch let error {
@@ -93,6 +95,7 @@ class SuperheroTable {
             //Todo fix
             for superheroTable in try db!.prepare(favouriteHeros) {
                 var superhero = FavSuperhero()
+                superhero.id = String(superheroTable[id])
                 superhero.name = superheroTable[name]
                 superhero.intelligence = superheroTable[intelligence]
                 superhero.strength = superheroTable[strength]
@@ -114,30 +117,49 @@ class SuperheroTable {
         return favSuperHeroes
     }
     
-    func getFavHero() -> FavSuperhero? {
-        var favSuperHeroe: FavSuperhero?
+    func getFavHero(heroId: Int64) -> FavSuperhero? {
+        var favSuperHeroe = FavSuperhero()
+        
         do {
-            //Todo fix
-            for superheroTable in try db!.prepare(favouriteHeros) {
-                var superhero = FavSuperhero()
-                superhero.name = superheroTable[name]
-                superhero.intelligence = superheroTable[intelligence]
-                superhero.strength = superheroTable[strength]
-                superhero.speed = superheroTable[speed]
-                superhero.fullName = superheroTable[fullName]
-                superhero.alterEgos = superheroTable[alterEgos]
-                superhero.placeOfBirth = superheroTable[placeOfBirth]
-                superhero.publisher = superheroTable[publisher]
-                superhero.rating = Float(superheroTable[rating])
-                superhero.imageUrl = superheroTable[imageUrl]
-                
+            let query = favouriteHeros.filter(id == heroId)
+            for superheroTable in try db!.prepare(query) {
+                favSuperHeroe.id = String(superheroTable[id])
+                favSuperHeroe.name = superheroTable[name]
+                favSuperHeroe.intelligence = superheroTable[intelligence]
+                favSuperHeroe.strength = superheroTable[strength]
+                favSuperHeroe.speed = superheroTable[speed]
+                favSuperHeroe.fullName = superheroTable[fullName]
+                favSuperHeroe.alterEgos = superheroTable[alterEgos]
+                favSuperHeroe.placeOfBirth = superheroTable[placeOfBirth]
+                favSuperHeroe.publisher = superheroTable[publisher]
+                favSuperHeroe.rating = Float(superheroTable[rating])
+                favSuperHeroe.imageUrl = superheroTable[imageUrl]
             }
             
         } catch let error {
-            print("getFavHero Error: \(error)")
+            print("Get fav hero Error: \(error)")
         }
         
+        
         return favSuperHeroe
+    }
+    
+
+    func isExist(heroId: Int64) -> Bool {
+        
+        var exist = false
+        
+        do {
+            let query = favouriteHeros.filter(id == heroId)
+            for superheroTable in try db!.prepare(query) {
+                exist = true
+            }
+            
+        } catch let error {
+            print("Get fav hero Error: \(error)")
+        }
+        
+        return exist
     }
     
     func delete(rowId: Int64){

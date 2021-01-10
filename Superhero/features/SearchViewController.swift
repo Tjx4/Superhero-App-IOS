@@ -126,7 +126,7 @@ class SearchViewController: UIViewController {
             
             let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
             
-            favouritesViewController.superheroes = dbHelper.superheroTable.getAll()
+            // favouritesViewController.superheroes = dbHelper.superheroTable.getAll()
             
         default:
             var fdf = 0 // Todo Remove
@@ -158,7 +158,9 @@ extension SearchViewController: UITableViewDataSource {
        
         let superheroTableViewCell = tableView.dequeueReusableCell(withIdentifier: SuperheroTableViewCell.identifier, for: indexPath) as! SuperheroTableViewCell
         
-        let superhero: Superhero? = superheroes?[indexPath.row]
+        var superhero: Superhero? = superheroes?[indexPath.row]
+        superhero!.isFav = self.dbHelper.superheroTable.isExist(heroId: Int64(superhero!.id ?? "0") ?? 0) //Todo Fix
+        
         superheroTableViewCell.config(superhero: superhero)
         superheroTableViewCell.onFaveClicked = self.addHeroToFavourites
         
