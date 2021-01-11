@@ -1,10 +1,3 @@
-//
-//  RatingViewController.swift
-//  Superhero
-//
-//  Created by Tshepo Mahlaula on 2021/01/03.
-//
-
 import UIKit
 import AARatingBar
 

@@ -1,4 +1,3 @@
-
 import UIKit
 import Moya
 
@@ -43,7 +42,6 @@ class SearchViewController: UIViewController {
     
     
     @objc func textFieldDidEditingChanged(_ textField: UITextField) {
-
         if searchTimer != nil {
             searchTimer?.invalidate()
             searchTimer = nil
@@ -90,7 +88,6 @@ class SearchViewController: UIViewController {
                     print("Error: \(error)")
                     
                     self.showNoResults(keywords: keywords)
-                    
              }
         }
     }
@@ -105,10 +102,6 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func onLogoClicked(_ sender: Any) {
-        
-    }
-    
-    func viewSuperhero(superhero: Superhero){
         
     }
     
@@ -132,10 +125,8 @@ class SearchViewController: UIViewController {
             
             let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
             
-            // favouritesViewController.superheroes = dbHelper.superheroTable.getAll()
-            
         default:
-            var fdf = 0 // Todo Remove
+            print("Unknown segue")
         }
         
    }
@@ -165,7 +156,7 @@ extension SearchViewController: UITableViewDataSource {
         let superheroTableViewCell = tableView.dequeueReusableCell(withIdentifier: SuperheroTableViewCell.identifier, for: indexPath) as! SuperheroTableViewCell
         
         var superhero: Superhero? = superheroes?[indexPath.row]
-        superhero!.isFav = self.dbHelper.superheroTable.isExist(heroId: Int64(superhero!.id ?? "0") ?? 0) //Todo Fix
+        superhero!.isFav = self.dbHelper.superheroTable.isExist(heroId: Int64(superhero!.id ?? "0") ?? 0)
         
         superheroTableViewCell.config(superhero: superhero)
         superheroTableViewCell.onFaveClicked = self.addHeroToFavourites
@@ -177,5 +168,4 @@ extension SearchViewController: UITableViewDataSource {
         return superheroTableViewCell
     }
     
-
 }

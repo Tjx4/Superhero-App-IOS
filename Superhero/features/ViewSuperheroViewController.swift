@@ -68,8 +68,7 @@ class ViewSuperheroViewController: UIViewController {
     }
     
     @objc func onRateHeroClicked(sender: UIBarButtonItem) {
- 
-            segueToScreen(segueIdentifier: "rateHeroSegue")
+        segueToScreen(segueIdentifier: "rateHeroSegue")
     }
     
     @IBAction func onMoreInfoClicked(_ sender: UIButton) {
@@ -99,7 +98,6 @@ class ViewSuperheroViewController: UIViewController {
                     print("Error: \(error)")
              }
         }
-        
          
     }
     
@@ -111,7 +109,7 @@ class ViewSuperheroViewController: UIViewController {
             ratingViewController.superhero = superhero
       
         default:
-            var fdf = 0
+            print("Unknown segue")
         }
        
       }

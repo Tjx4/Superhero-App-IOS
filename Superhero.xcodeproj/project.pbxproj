@@ -195,7 +195,6 @@
 				7C5793DE25A03FD00082CAD0 /* models */,
 				7C5793D825A03F520082CAD0 /* extensions */,
 				7C5793CF25A03E580082CAD0 /* features */,
-				7C5793B7259FA2FA0082CAD0 /* color */,
 				7C5793AB259F95700082CAD0 /* helpers */,
 				7C57939F259F94A10082CAD0 /* customControls */,
 				7C27C9DF259F567C0086CA25 /* AppDelegate.swift */,
@@ -204,7 +203,6 @@
 				7C27C9E8259F567F0086CA25 /* Assets.xcassets */,
 				7C27C9EA259F567F0086CA25 /* LaunchScreen.storyboard */,
 				7C27C9ED259F567F0086CA25 /* Info.plist */,
-				7C5793B8259FA3A20082CAD0 /* GradientUIView.swift */,
 			);
 			path = Superhero;
 			sourceTree = "<group>";
@@ -238,6 +236,7 @@
 		7C57939F259F94A10082CAD0 /* customControls */ = {
 			isa = PBXGroup;
 			children = (
+				7C5793B8259FA3A20082CAD0 /* GradientUIView.swift */,
 				7C5793A0259F94EC0082CAD0 /* SearchUITextField.swift */,
 				7C57942825A05C3F0082CAD0 /* RoundedUIImageView.swift */,
 				7C57944A25A0CE360082CAD0 /* PaddedImageView.swift */,
@@ -254,13 +253,6 @@
 				7C4AB15925A85E1E00B934FD /* DbHelper.swift */,
 			);
 			path = helpers;
-			sourceTree = "<group>";
-		};
-		7C5793B7259FA2FA0082CAD0 /* color */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = color;
 			sourceTree = "<group>";
 		};
 		7C5793CF25A03E580082CAD0 /* features */ = {

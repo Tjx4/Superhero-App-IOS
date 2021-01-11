@@ -35,7 +35,6 @@ extension SuperheroService: TargetType {
      switch self {
          case .search: return .requestPlain
          case .apearance: return .requestPlain
-         //   case .apearance(let myId): return .requestParameters(parameters: ["id" : "myId", "name" : "My name"], encoding: JSONEncoding.default)
      }
   }
 

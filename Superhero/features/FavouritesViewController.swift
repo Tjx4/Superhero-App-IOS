@@ -49,9 +49,8 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
             viewSuperheroViewController.superhero = superheroes?[selectedIndex].toSuperhero()
             
         default:
-            var fdf = 0 // Todo Remove
+            print("Unknown segue")
         }
-        
    }
 }
 
@@ -82,11 +81,11 @@ extension FavouritesViewController {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellsPerRow = 2
         let inset: CGFloat = 10
-        let minimumLineSpacing: CGFloat = 0
+        //let minimumLineSpacing: CGFloat = 0
         let minimumInteritemSpacing: CGFloat = 0
         let collectionViewWidth = collectionView.bounds.size.width
         
-        let marginsAndInsets = CGFloat(0) // inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
+        let marginsAndInsets = inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
        
         let itemWidth = ((collectionViewWidth - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
         

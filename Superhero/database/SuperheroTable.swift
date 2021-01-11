@@ -151,8 +151,9 @@ class SuperheroTable {
         
         do {
             let query = favouriteHeros.filter(id == heroId)
-            for superheroTable in try db!.prepare(query) {
+            for _ in try db!.prepare(query) {
                 exist = true
+                break
             }
             
         } catch let error {

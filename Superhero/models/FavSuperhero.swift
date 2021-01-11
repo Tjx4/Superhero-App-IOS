@@ -1,5 +1,3 @@
-
-
 struct FavSuperhero: Codable {
     var id: String? = nil
     var name: String? = nil
