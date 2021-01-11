@@ -173,7 +173,7 @@
             <objects>
                 <viewController id="vQd-jH-cRn" customClass="ViewSuperheroViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qh9-Um-OdO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-B3-eHO">
@@ -610,7 +610,7 @@
             <objects>
                 <viewController id="nVq-UU-Qe2" customClass="RatingViewController" customModule="Superhero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jki-v4-j3o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-JS-7Ih" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
@@ -701,7 +701,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Ds8-yD-NBM"/>
+        <segue reference="yBR-Ae-Yc5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="close_black" width="24" height="24"/>

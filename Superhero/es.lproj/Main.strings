@@ -1,0 +1,114 @@
+
+/* Class = "UILabel"; text = "0"; ObjectID = "0j6-uD-HYy"; */
+"0j6-uD-HYy.text" = "0";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "16Y-ib-8nz"; */
+"16Y-ib-8nz.title" = "Articulo";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "4ug-ER-pXF"; */
+"4ug-ER-pXF.text" = "0";
+
+/* Class = "UILabel"; text = "Biography"; ObjectID = "5u9-cU-tzN"; */
+"5u9-cU-tzN.text" = "Biografía";
+
+/* Class = "UILabel"; text = "Appearance"; ObjectID = "7bk-il-jzi"; */
+"7bk-il-jzi.text" = "Apariencia";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "8c2-JH-HKa"; */
+"8c2-JH-HKa.title" = "Articulo";
+
+/* Class = "UIButton"; normalTitle = "MORE INFO"; ObjectID = "ExC-2g-3VC"; */
+"ExC-2g-3VC.normalTitle" = "MÁS INFORMACIÓN";
+
+/* Class = "UILabel"; text = "No heroes found"; ObjectID = "GPb-Gf-jqz"; */
+"GPb-Gf-jqz.text" = "No se encontraron héroes";
+
+/* Class = "UILabel"; text = "Place of birth:"; ObjectID = "JYA-EL-J4h"; */
+"JYA-EL-J4h.text" = "Lugar de nacimiento:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "KDJ-SK-UAI"; */
+"KDJ-SK-UAI.text" = "0";
+
+/* Class = "UILabel"; text = "Real name"; ObjectID = "OaJ-TG-S58"; */
+"OaJ-TG-S58.text" = "Nombre real";
+
+/* Class = "UILabel"; text = "Alter Egos:"; ObjectID = "QQE-Hz-Oec"; */
+"QQE-Hz-Oec.text" = "Alter egos:";
+
+/* Class = "UILabel"; text = "Strength:"; ObjectID = "RHs-GM-Bc8"; */
+"RHs-GM-Bc8.text" = "Fuerza:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "SQ3-MX-XLu"; */
+"SQ3-MX-XLu.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Favourite superheroes"; ObjectID = "Siw-Hi-RWV"; */
+"Siw-Hi-RWV.title" = "Superhéroes favoritos";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "XO3-l9-axh"; */
+"XO3-l9-axh.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "XQX-uh-fxO"; */
+"XQX-uh-fxO.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Superheroes"; ObjectID = "XZ5-Zw-CFs"; */
+"XZ5-Zw-CFs.title" = "Superhéroes";
+
+/* Class = "UILabel"; text = "Gender:"; ObjectID = "XyH-Pn-vIR"; */
+"XyH-Pn-vIR.text" = "Género:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "a87-Rq-2GD"; */
+"a87-Rq-2GD.text" = "0";
+
+/* Class = "UILabel"; text = "Full names:"; ObjectID = "aGe-HX-81W"; */
+"aGe-HX-81W.text" = "Nombres completos:";
+
+/* Class = "UILabel"; text = "publisher"; ObjectID = "aZD-6X-t3Z"; */
+"aZD-6X-t3Z.text" = "editora";
+
+/* Class = "UILabel"; text = "Speed:"; ObjectID = "bX2-Vn-sri"; */
+"bX2-Vn-sri.text" = "Velocidad:";
+
+/* Class = "UILabel"; text = "Height:"; ObjectID = "coE-0N-iax"; */
+"coE-0N-iax.text" = "Altura:";
+
+/* Class = "UITextField"; placeholder = "Search for heroes"; ObjectID = "dsr-PL-uUD"; */
+"dsr-PL-uUD.placeholder" = "Buscar héroes";
+
+/* Class = "UILabel"; text = "Race:"; ObjectID = "g6d-nF-rjH"; */
+"g6d-nF-rjH.text" = "Raza:";
+
+/* Class = "UIBarButtonItem"; title = "back"; ObjectID = "hJe-xz-h7y"; */
+"hJe-xz-h7y.title" = "espalda";
+
+/* Class = "UILabel"; text = "Inteligence:"; ObjectID = "mGz-iP-KHZ"; */
+"mGz-iP-KHZ.text" = "Inteligencia:";
+
+/* Class = "UILabel"; text = "Weight:"; ObjectID = "nRv-VE-Oiu"; */
+"nRv-VE-Oiu.text" = "Peso:";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "q95-vg-5Bq"; */
+"q95-vg-5Bq.title" = "Articulo";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "qs7-IS-KdZ"; */
+"qs7-IS-KdZ.text" = "0";
+
+/* Class = "UILabel"; text = "Superhero"; ObjectID = "rX4-86-tu5"; */
+"rX4-86-tu5.text" = "Superhéroe";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "scD-Ng-eaU"; */
+"scD-Ng-eaU.title" = "Articulo";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "slE-qk-Uu5"; */
+"slE-qk-Uu5.text" = "0";
+
+/* Class = "UILabel"; text = "Power Stats"; ObjectID = "vXo-P3-9yr"; */
+"vXo-P3-9yr.text" = "Estadísticas de poder";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "wDi-Uw-Wpv"; */
+"wDi-Uw-Wpv.text" = "0";
+
+/* Class = "UILabel"; text = "You have no favourite superheroes"; ObjectID = "wJV-su-gGD"; */
+"wJV-su-gGD.text" = "No tienes superhéroes favoritos";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "xPm-ua-aMT"; */
+"xPm-ua-aMT.title" = "Articulo";

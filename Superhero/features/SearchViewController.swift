@@ -23,18 +23,22 @@ class SearchViewController: UIViewController {
         superheroTableView.dataSource = self as! UITableViewDataSource
     
         self.txtSearch.delegate = self
-        // handle the editingChanged event by calling (textFieldDidEditingChanged(-:))
-            self.txtSearch.addTarget(self, action: #selector(textFieldDidEditingChanged(_:)), for: .editingChanged)
+        self.txtSearch.addTarget(self, action: #selector(textFieldDidEditingChanged(_:)), for: .editingChanged)
         
         dbHelper.connect()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if superheroes?.isEmpty ?? false ||  superheroes == nil{
+        if superheroes?.isEmpty ?? false || superheroes == nil{
             return
         }
         
         superheroTableView.reloadData()
+    }
+    
+    func textFieldShouldReturn(userText: UITextField!) -> Bool {
+        userText.resignFirstResponder()
+        return true;
     }
     
     
@@ -59,15 +63,9 @@ class SearchViewController: UIViewController {
         activityLoader.translatesAutoresizingMaskIntoConstraints = false
         activityLoader.startAnimating()
         
-        
         searchForSuperHeroes(keywords: keywords)
     }
-    
-    func textFieldShouldReturn(userText: UITextField!) -> Bool {
-        userText.resignFirstResponder()
-        return true;
-    }
-    
+ 
     func searchForSuperHeroes(keywords: String)  {
         self.lblNoresults.isHidden = true
         self.superheroes?.removeAll()
@@ -97,10 +95,9 @@ class SearchViewController: UIViewController {
         }
     }
     
-    
     func showNoResults(keywords: String){
         self.lblNoresults.isHidden = false
-        self.lblNoresults.text = "No heroes found that match - \(keywords)"
+        self.lblNoresults.text = "no_heroes".localizeWithFormat(arguments: keywords)
     }
 
     @IBAction func onViewFavouritesClicked(_ sender: Any) {

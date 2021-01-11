@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		701FFB6EE3B82FC65EFFFF05 /* Pods_Superhero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0C813903F3C647E64743E7 /* Pods_Superhero.framework */; };
+		7C0F981325AC3BD000666E79 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0F981225AC3BD000666E79 /* StringExtensions.swift */; };
+		7C0F981B25AC3F2A00666E79 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C0F981D25AC3F2A00666E79 /* Localizable.strings */; };
 		7C27C9E0259F567C0086CA25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27C9DF259F567C0086CA25 /* AppDelegate.swift */; };
 		7C27C9E2259F567C0086CA25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27C9E1259F567C0086CA25 /* SceneDelegate.swift */; };
 		7C27C9E4259F567C0086CA25 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27C9E3259F567C0086CA25 /* SearchViewController.swift */; };
@@ -68,6 +70,10 @@
 /* Begin PBXFileReference section */
 		0F0C813903F3C647E64743E7 /* Pods_Superhero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Superhero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F9287B48F91B4367A032074 /* Pods-Superhero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Superhero.debug.xcconfig"; path = "Target Support Files/Pods-Superhero/Pods-Superhero.debug.xcconfig"; sourceTree = "<group>"; };
+		7C0F981225AC3BD000666E79 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		7C0F981725AC3CFC00666E79 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		7C0F981C25AC3F2A00666E79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7C0F982125AC3F3600666E79 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C27C9DC259F567C0086CA25 /* Superhero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Superhero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C27C9DF259F567C0086CA25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C27C9E1259F567C0086CA25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +155,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C0F980725AC36DB00666E79 /* localization */ = {
+			isa = PBXGroup;
+			children = (
+				7C0F981D25AC3F2A00666E79 /* Localizable.strings */,
+			);
+			path = localization;
+			sourceTree = "<group>";
+		};
 		7C27C9D3259F567C0086CA25 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +188,7 @@
 		7C27C9DE259F567C0086CA25 /* Superhero */ = {
 			isa = PBXGroup;
 			children = (
+				7C0F980725AC36DB00666E79 /* localization */,
 				7C4AB0E725A5778E00B934FD /* database */,
 				7C57943225A092EF0082CAD0 /* networking */,
 				7C57942025A05B770082CAD0 /* customCells */,
@@ -266,6 +281,7 @@
 				7C57941225A054930082CAD0 /* UIImageViewExtensions.swift */,
 				7C57947425A1AA070082CAD0 /* UIImageExtension.swift */,
 				7C4AB0F525A587F400B934FD /* SuperheroExtensions.swift */,
+				7C0F981225AC3BD000666E79 /* StringExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -401,6 +417,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 7C27C9D3259F567C0086CA25;
 			productRefGroup = 7C27C9DD259F567C0086CA25 /* Products */;
@@ -420,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C27C9EC259F567F0086CA25 /* LaunchScreen.storyboard in Resources */,
+				7C0F981B25AC3F2A00666E79 /* Localizable.strings in Resources */,
 				7C4AB10525A5B0FB00B934FD /* FavouritesCollectionViewCell.xib in Resources */,
 				7C27C9E9259F567F0086CA25 /* Assets.xcassets in Resources */,
 				7C27C9E7259F567C0086CA25 /* Main.storyboard in Resources */,
@@ -496,6 +514,7 @@
 				7C4AB16B25A88A1400B934FD /* SuperheroTable.swift in Sources */,
 				7C27C9E4259F567C0086CA25 /* SearchViewController.swift in Sources */,
 				7C4AB0E925A5779E00B934FD /* FavSuperhero.swift in Sources */,
+				7C0F981325AC3BD000666E79 /* StringExtensions.swift in Sources */,
 				7C57942325A05C050082CAD0 /* SuperheroTableViewCell.swift in Sources */,
 				7C57943C25A0A9D80082CAD0 /* SearchResponse.swift in Sources */,
 				7C5793AD259F95800082CAD0 /* ColorHelper.swift in Sources */,
@@ -556,10 +575,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7C0F981D25AC3F2A00666E79 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C0F981C25AC3F2A00666E79 /* en */,
+				7C0F982125AC3F3600666E79 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7C27C9E5259F567C0086CA25 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7C27C9E6259F567C0086CA25 /* Base */,
+				7C0F981725AC3CFC00666E79 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -579,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -640,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
