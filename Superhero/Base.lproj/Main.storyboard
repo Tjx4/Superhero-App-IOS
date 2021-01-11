@@ -161,7 +161,6 @@
                     <connections>
                         <outlet property="cvFavSuperheroes" destination="jKd-Uu-CHw" id="dcf-m7-hk0"/>
                         <outlet property="lblNoFavourites" destination="wJV-su-gGD" id="8wV-R0-pzs"/>
-                        <segue destination="vQd-jH-cRn" kind="show" identifier="viewFavHeroSegue" id="Ds8-yD-NBM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUE-7H-wNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,13 +176,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-B3-eHO">
-                                <rect key="frame" x="0.0" y="56" width="414" height="280"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="azf-eS-yYf"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cG-Xv-iVc">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alP-9L-DOJ" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1280"/>
@@ -614,14 +613,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-JS-7Ih" customClass="RoundedUIImageView" customModule="Superhero" customModuleProvider="target">
-                                <rect key="frame" x="137" y="92" width="140" height="140"/>
+                                <rect key="frame" x="137" y="124" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="0BK-k1-z7x"/>
                                     <constraint firstAttribute="width" constant="140" id="l3n-ym-rPu"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-M6-3Su" customClass="AARatingBar" customModule="AARatingBar">
-                                <rect key="frame" x="80" y="262" width="254" height="50"/>
+                                <rect key="frame" x="80" y="294" width="254" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KY8-68-Pee"/>
@@ -676,6 +675,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mh9-VC-Wqe">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKe-kR-JxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yz1-0b-fID" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4jU-Vb-s7c">
@@ -687,7 +687,6 @@
                         <segue destination="VvI-4H-hDY" kind="relationship" relationship="rootViewController" id="djI-dq-tYB"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UKe-kR-JxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="838.39285714285711"/>
         </scene>
@@ -700,9 +699,6 @@
             <size key="intrinsicContentSize" width="400" height="266.5"/>
         </designable>
     </designables>
-    <inferredMetricsTieBreakers>
-        <segue reference="yBR-Ae-Yc5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="close_black" width="24" height="24"/>
         <image name="fav_dark" width="24" height="24"/>

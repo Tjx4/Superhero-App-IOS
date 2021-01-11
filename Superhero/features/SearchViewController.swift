@@ -9,6 +9,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var lblNoresults: UILabel!
     let superheroProvider = MoyaProvider<SuperheroService>()
     var superheroes: [Superhero]?
+    var selectedHero: Superhero!
     var selectedIndex: Int!
     var searchTimer: Timer?
     let dbHelper = DbHelper()
@@ -40,6 +41,11 @@ class SearchViewController: UIViewController {
         return true;
     }
     
+    func viewSuperHero(superhero: Superhero){
+        selectedHero = superhero
+        segueToScreen(segueIdentifier: "viewHeroSegue")
+        self.txtSearch?.resignFirstResponder()
+    }
     
     @objc func textFieldDidEditingChanged(_ textField: UITextField) {
         if searchTimer != nil {
@@ -118,12 +124,12 @@ class SearchViewController: UIViewController {
         switch segue.identifier {
         case "viewHeroSegue" :
             let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
-            viewSuperheroViewController.superhero = superheroes?[selectedIndex]
+            viewSuperheroViewController.superhero = selectedHero
             
         case "viewFavouriteSuperheroesSegue" :
             let uINavigationController = segue.destination as! UINavigationController
-            
             let favouritesViewController = uINavigationController.viewControllers.first as! FavouritesViewController
+            favouritesViewController.searchViewController = self
             
         default:
             print("Unknown segue")
@@ -135,8 +141,11 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.item
-        segueToScreen(segueIdentifier: "viewHeroSegue")
-        self.txtSearch?.resignFirstResponder()
+        let superhero = superheroes?[selectedIndex]
+        
+        if superhero != nil {
+            self.viewSuperHero(superhero: superhero!)
+        }
     }
     
 }

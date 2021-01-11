@@ -9,6 +9,8 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
     var selectedIndex: Int!
     let dbHelper = DbHelper()
     
+    var searchViewController: SearchViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,45 +21,25 @@ class FavouritesViewController: UIViewController, UICollectionViewDelegate, UICo
         
         dbHelper.connect()
         superheroes = dbHelper.superheroTable.getAll()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         
         if (superheroes?.isEmpty ?? true)  {
             lblNoFavourites.isHidden = false
         }
-        
-        if superheroes?.isEmpty ?? false || superheroes == nil{
-            return
-        }
-        
-        superheroes = dbHelper.superheroTable.getAll()
-        cvFavSuperheroes.reloadData()
-        
     }
-    
-    @IBAction func onCloseButtonClicked(_ sender: Any) {
 
+    @IBAction func onCloseButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        switch segue.identifier {
-        case "viewFavHeroSegue" :
-            let viewSuperheroViewController = segue.destination as! ViewSuperheroViewController
-            viewSuperheroViewController.superhero = superheroes?[selectedIndex].toSuperhero()
-            
-        default:
-            print("Unknown segue")
-        }
-   }
+
 }
 
 extension FavouritesViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath.item
-        segueToScreen(segueIdentifier: "viewFavHeroSegue")
+        
+        let superhero: FavSuperhero? = superheroes?[indexPath.row]
+        self.dismiss(animated: true, completion: nil)
+        searchViewController?.viewSuperHero(superhero: superhero!.toSuperhero())
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -81,7 +63,6 @@ extension FavouritesViewController {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellsPerRow = 2
         let inset: CGFloat = 10
-        //let minimumLineSpacing: CGFloat = 0
         let minimumInteritemSpacing: CGFloat = 0
         let collectionViewWidth = collectionView.bounds.size.width
         
