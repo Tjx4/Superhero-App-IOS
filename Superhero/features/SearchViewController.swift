@@ -167,6 +167,11 @@ extension SearchViewController: UITableViewDataSource {
         var superhero: Superhero? = superheroes?[indexPath.row]
         superhero!.isFav = self.dbHelper.superheroTable.isExist(heroId: Int64(superhero!.id ?? "0") ?? 0)
         
+        if superhero!.isFav {
+            let faveHero = self.dbHelper.superheroTable.getFavHero(heroId: Int64(superhero?.id ?? "0") ?? 0)
+            superheroes?[indexPath.row].rating = faveHero?.rating ?? 0.0
+        }
+        
         superheroTableViewCell.config(superhero: superhero)
         superheroTableViewCell.onFaveClicked = self.addHeroToFavourites
         
