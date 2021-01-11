@@ -35,11 +35,20 @@ class SuperheroTableViewCell: UITableViewCell {
         }
         else {
             showDefStar()
-            
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        
             imgSetFav.isUserInteractionEnabled = true
-            imgSetFav.addGestureRecognizer(tapGestureRecognizer)
+            imgSetFav.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:))))
         }
+    }
+  
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        tappedImage.isHidden = true
+        imgFav.isHidden = false
+        
+       onFaveClicked(superhero)
     }
     
     func showIsFavStar(){
@@ -50,16 +59,6 @@ class SuperheroTableViewCell: UITableViewCell {
     func showDefStar(){
         imgSetFav.isHidden = false
         imgFav.isHidden = true
-    }
-    
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-
-        tappedImage.isHidden = true
-        imgFav.isHidden = false
-        
-       onFaveClicked(superhero)
     }
     
 }
